@@ -1,0 +1,3376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGUYEN THI MINH NGUYET — International Economics & Global Trade Advisory</title>
+  
+  <!-- Premium Fonts with Native Glyph Support -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800&family=JetBrains+Mono:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <!-- Canvas Confetti CDN for Grand Dual-Cannon Fireworks Celebration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Be Vietnam Pro"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            obsidian: '#031735',
+            surface: 'rgba(9, 33, 66, 0.88)',
+            card: 'rgba(12, 42, 82, 0.92)',
+            borderSubtle: 'rgba(125, 211, 252, 0.32)',
+            borderHighlight: 'rgba(125, 211, 252, 0.68)',
+            accentGold: '#facc15',
+            accentEmerald: '#10b981',
+            accentCyan: '#38bdf8'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: auto !important;
+    }
+    body {
+      background-color: #03152d;
+      background-image: radial-gradient(circle at 50% 14%, #0e4884 0%, #083161 35%, #041f42 70%, #021226 100%);
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* High Legibility & Enhanced Contrast Overrides to eliminate any drowning text */
+    .text-zinc-500 {
+      color: #94a3b8 !important; /* Luminous slate-400 instead of dull zinc-500 */
+    }
+    .text-zinc-400 {
+      color: #cbd5e1 !important; /* Crisp slate-300 instead of dim zinc-400 */
+    }
+    .text-zinc-300 {
+      color: #f1f5f9 !important; /* Bright slate-100 instead of faint zinc-300 */
+    }
+    .text-zinc-200 {
+      color: #ffffff !important; /* Pure crisp white */
+    }
+    .font-light {
+      font-weight: 400 !important; /* Elevate wispy thin 300 font to solid 400 readability */
+    }
+
+    /* Custom Cursor on Desktop */
+    @media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+      body, a, button, input, [role="button"], select, textarea {
+        cursor: none !important;
+      }
+    }
+
+    #cursor-container {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      overflow: hidden;
+    }
+
+    #cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #ffffff;
+      border-radius: 9999px;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s, box-shadow 0.2s;
+      z-index: 100000;
+      will-change: transform;
+      opacity: 0;
+    }
+
+    #cursor-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 34px;
+      height: 34px;
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      border-radius: 9999px;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s, background-color 0.25s;
+      z-index: 99999;
+      will-change: transform;
+      opacity: 0;
+    }
+
+    #cursor-aura {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 280px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(14, 165, 233, 0.04) 45%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      will-change: transform;
+      opacity: 0;
+    }
+
+    /* Cursor Hover State */
+    body.cursor-hover #cursor-ring {
+      width: 60px;
+      height: 60px;
+      border-color: rgba(56, 189, 248, 0.9);
+      background-color: rgba(56, 189, 248, 0.15);
+      backdrop-filter: blur(2px);
+    }
+
+    body.cursor-hover #cursor-dot {
+      width: 9px;
+      height: 9px;
+      background-color: #38bdf8;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.9);
+    }
+
+    body.cursor-active #cursor-ring {
+      transform: translate(-50%, -50%) scale(0.75);
+      border-color: #0284c7;
+      background-color: rgba(56, 189, 248, 0.3);
+    }
+
+    /* Ripple Wave Animation on Click */
+    .cursor-click-ripple {
+      position: fixed;
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      border: 2px solid rgba(56, 189, 248, 0.9);
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(1);
+      animation: cursorRippleAnim 0.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+      z-index: 99998;
+    }
+
+    @keyframes cursorRippleAnim {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(5.5);
+        opacity: 0;
+      }
+    }
+
+    /* Tactile Progressive Card Reveal ("Reveal dần dần") */
+    .reveal-card, .reveal-item {
+      opacity: 0;
+      transform: translateY(38px) scale(0.96);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-card.is-visible, .reveal-item.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .reveal-header {
+      opacity: 0;
+      transform: translateY(28px) scale(0.97);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-header.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Distinct, perceptible progressive stagger intervals for sequential cascading cards */
+    .stagger-1 { transition-delay: 100ms; }
+    .stagger-2 { transition-delay: 240ms; }
+    .stagger-3 { transition-delay: 380ms; }
+    .stagger-4 { transition-delay: 520ms; }
+    .stagger-5 { transition-delay: 660ms; }
+    .stagger-6 { transition-delay: 800ms; }
+
+    /* Fluid Aurora Moving Background Animation */
+    @keyframes auroraBgDrift {
+      0% {
+        transform: scale(1.05) translate(0%, 0%) rotate(0deg);
+      }
+      33% {
+        transform: scale(1.10) translate(-2%, 1.5%) rotate(0.6deg);
+      }
+      66% {
+        transform: scale(1.07) translate(1.8%, -1.8%) rotate(-0.5deg);
+      }
+      100% {
+        transform: scale(1.12) translate(-1.2%, 1.2%) rotate(0.4deg);
+      }
+    }
+
+    @keyframes auroraLightFlow {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.25;
+      }
+      50% {
+        transform: translate(80px, 60px) scale(1.25);
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes auroraWavePulse {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.2;
+      }
+      50% {
+        transform: translate(-70px, -50px) scale(1.3);
+        opacity: 0.45;
+      }
+    }
+
+    @keyframes auroraDeepFloat {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.2;
+      }
+      50% {
+        transform: translate(50px, -40px) scale(1.2);
+        opacity: 0.4;
+      }
+    }
+
+    .animate-aurora-bg {
+      animation: auroraBgDrift 26s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+
+    .animate-aurora-orb-1 {
+      animation: auroraLightFlow 16s ease-in-out infinite;
+      will-change: transform, opacity;
+    }
+
+    .animate-aurora-orb-2 {
+      animation: auroraWavePulse 20s ease-in-out infinite alternate;
+      will-change: transform, opacity;
+    }
+
+    .animate-aurora-orb-3 {
+      animation: auroraDeepFloat 24s ease-in-out infinite;
+      will-change: transform, opacity;
+    }
+
+    /* 3D Interactive Card Flip Architecture */
+    .flip-card-wrapper {
+      perspective: 1200px;
+      -webkit-perspective: 1200px;
+      position: relative;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      min-height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      transition: transform 0.75s cubic-bezier(0.2, 0.85, 0.25, 1);
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .flip-card-wrapper:hover .flip-card-inner,
+    .flip-card-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      grid-area: 1 / 1 / 2 / 2;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 1.5rem;
+    }
+
+    /* FRONT FACE: MẶT ĐẦU TIÊN PHẢI BÍ ẨN (0deg) */
+    .flip-card-front {
+      transform: rotateY(0deg);
+      z-index: 2;
+    }
+
+    /* BACK FACE: RỒI LẬT MỚI HIỆN NỘI DUNG (180deg) */
+    .flip-card-back {
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+
+    .flip-hint-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: rgba(186, 230, 253, 0.85);
+      background: rgba(14, 116, 214, 0.22);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .flip-card-wrapper:hover .flip-hint-pill {
+      background: rgba(14, 116, 214, 0.45);
+      color: #ffffff;
+      border-color: rgba(125, 211, 252, 0.7);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    }
+
+    /* Tactile Interactive Cards with Frosted Oceanic Glassmorphism */
+    .interactive-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+      will-change: transform, box-shadow;
+    }
+
+    .interactive-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px -15px rgba(1, 12, 28, 0.85), 0 0 30px -5px rgba(56, 189, 248, 0.3);
+      border-color: rgba(125, 211, 252, 0.55) !important;
+    }
+
+    ::selection {
+      background: #ffffff;
+      color: #030812;
+    }
+    .gpu-accel {
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+    }
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020c1a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e3a5f;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2563eb;
+    }
+    .vinyl-grooves {
+      background: radial-gradient(circle, #1a3556 15%, #0b1a2e 16%, #1f426e 30%, #0b1a2e 31%, #245288 50%, #0b1a2e 51%, #2c63a6 70%, #081322 71%);
+    }
+    @keyframes spinDisc {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .spin-active {
+      animation: spinDisc 6s linear infinite;
+    }
+    .tight-heading {
+      letter-spacing: -0.04em;
+    }
+
+    /* ==================== GAMIFICATION STYLES ==================== */
+    .xp-floating-pill {
+      position: absolute;
+      transform: translate(-50%, 0);
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.98), rgba(245, 158, 11, 0.98));
+      color: #020b18;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      box-shadow: 0 0 25px rgba(251, 191, 36, 0.8), 0 4px 12px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      pointer-events: none;
+      z-index: 99999;
+      animation: xpFloatUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes xpFloatUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 15px) scale(0.65);
+      }
+      20% {
+        opacity: 1;
+        transform: translate(-50%, -10px) scale(1.15);
+      }
+      80% {
+        opacity: 1;
+        transform: translate(-50%, -40px) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -65px) scale(0.85);
+      }
+    }
+
+    /* Badge Unlocked State in Modal */
+    .badge-unlocked {
+      opacity: 1 !important;
+      filter: grayscale(0) !important;
+      border-color: rgba(56, 189, 248, 0.6) !important;
+      background: linear-gradient(135deg, rgba(6, 29, 59, 0.95), rgba(2, 13, 28, 0.98)) !important;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25) !important;
+    }
+    .badge-unlocked .badge-icon {
+      background: rgba(56, 189, 248, 0.25) !important;
+      color: #38bdf8 !important;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4) !important;
+    }
+    .badge-unlocked .status-text {
+      color: #34d195 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Card Decrypted Pulse Effect */
+    .card-just-unlocked {
+      animation: unlockFlash 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes unlockFlash {
+      0% {
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.9);
+      }
+      50% {
+        box-shadow: 0 0 45px 12px rgba(56, 189, 248, 0.7);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-zinc-100 min-h-screen relative antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Fixed Atmospheric Aurora Blue Background Layer with Smooth Fluid Motion -->
+  <div class="fixed inset-0 -z-50 pointer-events-none overflow-hidden select-none">
+    <!-- Moving Aurora Graphic Artwork Layer (Vibrant Blue Silk Texture) -->
+    <div class="absolute -inset-12 w-[calc(100%+96px)] h-[calc(100%+96px)] animate-aurora-bg">
+      <img 
+        src="./bg.jpg" 
+        alt="Atmospheric Blue Silk Texture Background"
+        onerror="this.src='./bg.png';"
+        class="w-full h-full object-cover object-center filter brightness-[1.05] contrast-[1.12]"
+      />
+    </div>
+
+    <!-- Floating Cyan & Sapphire Luminous Wave Currents -->
+    <div class="absolute -top-28 -left-28 w-[750px] h-[750px] bg-cyan-400/30 rounded-full blur-[120px] animate-aurora-orb-1 mix-blend-screen pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-[800px] h-[800px] bg-sky-400/30 rounded-full blur-[130px] animate-aurora-orb-2 mix-blend-screen pointer-events-none"></div>
+    <div class="absolute -bottom-36 left-1/4 w-[850px] h-[850px] bg-blue-500/30 rounded-full blur-[140px] animate-aurora-orb-3 mix-blend-screen pointer-events-none"></div>
+
+    <!-- Oceanic sapphire contrast veil - balances glowing blue artwork with deep, high-contrast text legibility -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#03152d]/35 via-[#051e3e]/40 to-[#03142a]/55 backdrop-blur-[0.5px]"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-15"></div>
+  </div>
+
+  <!-- Canvas for Floating Sparkling Glitter Particles ("Glitter bay bay") -->
+  <canvas id="glitter-canvas" class="fixed inset-0 pointer-events-none z-0 select-none"></canvas>
+
+  <!-- Interactive Custom Cursor Elements -->
+  <div id="cursor-container" class="pointer-events-none fixed inset-0 z-[99999] overflow-hidden hidden md:block">
+    <div id="cursor-aura"></div>
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+  </div>
+
+  <!-- Background Music Element (Saturn - SZA) -->
+  <audio 
+    id="bg-audio" 
+    loop
+    preload="auto"
+    src="./saturn.webm"
+    onerror="this.src='C:/Users/ADMIN/.gemini/antigravity/scratch/minh-nguyet-portfolio/saturn.webm';"
+  ></audio>
+
+  <!-- Toast Notification Container (Positioned Safely Above Floating Player) -->
+  <div id="toast" class="fixed bottom-24 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-5 py-3 rounded-full bg-[#0a294d] border border-cyan-400/40 text-white shadow-2xl text-xs font-mono">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toast-text">Copied to clipboard</span>
+  </div>
+
+  <!-- ==================== FIXED STICKY NAVIGATION ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[#071f3f]/85 backdrop-blur-xl border-b border-cyan-400/25 shadow-[0_4px_20px_rgba(3,18,42,0.4)] transition-all duration-300 gpu-accel">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand Name (All Caps without diacritics) -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <div class="flex flex-col">
+          <span class="font-display font-extrabold tracking-tight text-sm text-white group-hover:text-cyan-200 transition-colors">
+            NGUYEN THI MINH NGUYET
+          </span>
+          <span class="font-mono text-[10px] text-cyan-300 font-medium tracking-wider uppercase">
+            FTU '28 · Global Trade Advisory
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Anchors -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-mono text-zinc-200">
+        <a href="#about" class="hover:text-cyan-300 transition-colors flex items-center gap-1.5"><span class="text-cyan-400 font-medium">01</span> About</a>
+        <a href="#experience" class="hover:text-cyan-300 transition-colors flex items-center gap-1.5"><span class="text-cyan-400 font-medium">02</span> Deloitte</a>
+        <a href="#community" class="hover:text-cyan-300 transition-colors flex items-center gap-1.5"><span class="text-cyan-400 font-medium">03</span> Community</a>
+        <a href="#case-study" class="hover:text-cyan-300 transition-colors flex items-center gap-1.5"><span class="text-cyan-400 font-medium">04</span> Vinamilk UAE</a>
+        <a href="#academic" class="hover:text-cyan-300 transition-colors flex items-center gap-1.5"><span class="text-cyan-400 font-medium">05</span> Research</a>
+        <a href="#literature" class="hover:text-cyan-300 transition-colors flex items-center gap-1.5"><span class="text-cyan-400 font-medium">06</span> Books</a>
+      </nav>
+
+      <!-- Action & Quick Audio Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Header BGM Trigger -->
+        <button onclick="toggleBgm()" class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-mono bg-[#0a294d] border border-cyan-400/40 text-zinc-200 hover:text-white hover:border-emerald-400/60 transition-all">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping" id="header-bgm-dot" style="display: none;"></span>
+          <i data-lucide="music" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span id="header-bgm-text">BGM: Saturn (SZA)</span>
+        </button>
+
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono bg-zinc-100 text-zinc-950 font-medium hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-all">
+          <span>Get in Touch</span>
+          <i data-lucide="arrow-down-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== EXECUTIVE GAMIFICATION QUEST HUD ==================== -->
+  <div id="gamification-hud" class="fixed top-16 left-0 right-0 z-30 bg-[#092b52]/85 backdrop-blur-xl border-b border-cyan-400/30 py-2.5 px-6 shadow-[0_8px_25px_rgba(3,18,42,0.45)] transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+      
+      <!-- Left: Rank / Level Badge & XP -->
+      <div class="flex items-center gap-3">
+        <div id="hud-rank-pill" class="flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 font-bold shadow-[0_0_15px_rgba(56,189,248,0.25)]">
+          <i id="hud-rank-icon" data-lucide="compass" class="w-3.5 h-3.5 text-cyan-400 animate-pulse"></i>
+          <span id="hud-rank-name">LVL 1: NOVICE OBSERVER</span>
+        </div>
+        
+        <div class="hidden sm:flex items-center gap-1.5 text-zinc-200">
+          <span class="text-zinc-300">XP:</span>
+          <span id="hud-xp-counter" class="text-amber-300 font-bold">0</span>
+          <span class="text-zinc-400">/ 2000</span>
+        </div>
+      </div>
+
+      <!-- Center: Discovery Progress Bar -->
+      <div class="flex-1 max-w-xs md:max-w-sm hidden md:flex items-center gap-3">
+        <span class="text-[11px] text-zinc-300 uppercase tracking-wider">Archives:</span>
+        <div class="flex-1 h-2 rounded-full bg-[#061e38] border border-cyan-400/40 overflow-hidden p-0.5">
+          <div id="hud-progress-fill" class="h-full rounded-full bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-300 transition-all duration-700 shadow-[0_0_10px_rgba(56,189,248,0.5)]" style="width: 0%"></div>
+        </div>
+        <span id="hud-progress-text" class="text-[11px] font-bold text-white min-w-[50px] text-right">0 / 20</span>
+      </div>
+
+      <!-- Right: Action Buttons (SFX + Quick Decrypt + Achievements) -->
+      <div class="flex items-center gap-2">
+        <!-- SFX Toggle -->
+        <button onclick="toggleSfx()" id="hud-sfx-btn" class="p-1.5 rounded-lg bg-[#0a294d] border border-cyan-400/40 text-zinc-300 hover:text-cyan-300 hover:border-cyan-400/70 transition-all" title="Toggle Sound Effects">
+          <i id="hud-sfx-icon" data-lucide="volume-2" class="w-3.5 h-3.5 text-cyan-400"></i>
+        </button>
+
+        <!-- Quick Decrypt All / Seal All -->
+        <button onclick="toggleDecryptAll()" id="hud-decrypt-all-btn" class="px-3 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400/50 text-cyan-200 font-bold flex items-center gap-1.5 transition-all text-[11px]" title="Auto-decrypt or seal all 20 cards">
+          <i data-lucide="sparkles" class="w-3 h-3 text-cyan-300"></i>
+          <span id="hud-decrypt-btn-text">⚡ Decrypt All</span>
+        </button>
+
+        <!-- Achievements Modal Trigger -->
+        <button onclick="openAchievementsModal()" class="px-3 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/50 text-amber-200 font-bold flex items-center gap-1.5 transition-all text-[11px]">
+          <i data-lucide="trophy" class="w-3 h-3 text-amber-400"></i>
+          <span>Badges</span>
+          <span id="hud-badge-count" class="px-1.5 py-0.2 rounded-full bg-amber-400 text-zinc-950 text-[10px] font-black">0/8</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== ACHIEVEMENTS MODAL ==================== -->
+  <div id="achievements-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+    <div class="w-full max-w-2xl rounded-3xl bg-gradient-to-br from-[#0c315e]/95 via-[#09264c]/95 to-[#061d3b]/95 backdrop-blur-2xl border-2 border-cyan-400/50 p-6 sm:p-8 shadow-[0_25px_60px_rgba(2,12,30,0.85)] relative overflow-hidden space-y-6">
+      <!-- Optical Brackets -->
+      <div class="absolute top-3 left-3 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-400"></div>
+      <div class="absolute top-3 right-3 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-400"></div>
+      <div class="absolute bottom-3 left-3 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-400"></div>
+      <div class="absolute bottom-3 right-3 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-400"></div>
+
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-cyan-500/20 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-2xl bg-amber-500/20 border border-amber-400/40 text-amber-300">
+            <i data-lucide="trophy" class="w-6 h-6 animate-bounce"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-extrabold text-xl text-white">Dossier Achievements & Badges</h3>
+            <p class="font-mono text-xs text-cyan-300">Unlocked: <span id="modal-unlocked-count">0</span> / 8 Milestones</p>
+          </div>
+        </div>
+        <button onclick="closeAchievementsModal()" class="p-2 rounded-xl bg-[#0a294d] border border-cyan-400/40 text-zinc-300 hover:text-white transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- All 8 Badges Completed Celebration Banner -->
+      <div id="modal-celebration-banner" class="hidden p-4 rounded-2xl bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-cyan-500/20 border-2 border-amber-300/80 shadow-[0_0_30px_rgba(251,191,36,0.3)] text-center space-y-2">
+        <div class="flex items-center justify-center gap-2 text-amber-200 font-display font-extrabold text-sm sm:text-base tracking-wide">
+          <span class="text-xl">🎆</span>
+          <span>CHÚC MỪNG! BẠN ĐÃ MỞ KHÓA TOÀN BỘ 8/8 HUY HIỆU DANH DỰ!</span>
+          <span class="text-xl">🏆</span>
+        </div>
+        <p class="text-xs text-slate-200 font-sans">
+          Toàn bộ hồ sơ bảo mật của Nguyễn Thị Minh Nguyệt đã được giải mã 100%!
+        </p>
+        <button onclick="launchDualSideFireworks()" class="mt-1 inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 hover:from-amber-300 hover:to-amber-200 text-zinc-950 font-mono text-xs font-black shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
+          <i data-lucide="sparkles" class="w-4 h-4 text-zinc-950 fill-current"></i>
+          <span>Bắn Lại Pháo Hoa 2 Bên ↺</span>
+        </button>
+      </div>
+
+      <!-- 8 Badges Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-1">
+        <!-- Badge 1: Academic Scholar -->
+        <div id="badge-academic" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Academic Scholar</div>
+            <p class="text-xs text-zinc-400">Reveal FTU Academic Foundation & Distinction GPA.</p>
+            <div class="text-[10px] font-mono text-zinc-500 status-text">Locked 🔒</div>
+          </div>
+        </div>
+
+        <!-- Badge 2: Deloitte Insider -->
+        <div id="badge-deloitte" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Deloitte GTA Insider</div>
+            <p class="text-xs text-zinc-300">Reveal all 6 official Tax & Customs tasks at Deloitte.</p>
+            <div class="text-[10px] font-mono text-zinc-400 status-text">Locked 🔒</div>
+          </div>
+        </div>
+
+        <!-- Badge 3: Community Leader -->
+        <div id="badge-community" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Community Catalyst</div>
+            <p class="text-xs text-zinc-300">Discover Prom Gala & Camping leadership missions.</p>
+            <div class="text-[10px] font-mono text-zinc-400 status-text">Locked 🔒</div>
+          </div>
+        </div>
+
+        <!-- Badge 4: Desert Trader -->
+        <div id="badge-vinamilk" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="line-chart" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Silk Road Strategist</div>
+            <p class="text-xs text-zinc-300">Decrypt all 3 pillars of Vinamilk UAE trade study.</p>
+            <div class="text-[10px] font-mono text-zinc-400 status-text">Locked 🔒</div>
+          </div>
+        </div>
+
+        <!-- Badge 5: Research Fellow -->
+        <div id="badge-research" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Empirical Researcher</div>
+            <p class="text-xs text-zinc-300">Examine BAV Second Prize paper & Technical Tooling.</p>
+            <div class="text-[10px] font-mono text-zinc-400 status-text">Locked 🔒</div>
+          </div>
+        </div>
+
+        <!-- Badge 6: Literary Thinker -->
+        <div id="badge-literature" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Starlit Philosopher</div>
+            <p class="text-xs text-zinc-300">Read reflections on John Green & Paul Kalanithi.</p>
+            <div class="text-[10px] font-mono text-zinc-400 status-text">Locked 🔒</div>
+          </div>
+        </div>
+
+        <!-- Badge 7: Cosmic Melophile -->
+        <div id="badge-music" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="disc" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Cosmic Resonance</div>
+            <p class="text-xs text-zinc-300">Play the background track "Saturn" by SZA.</p>
+            <div class="text-[10px] font-mono text-zinc-400 status-text">Locked 🔒</div>
+          </div>
+        </div>
+
+        <!-- Badge 8: 100% Grand Master -->
+        <div id="badge-grandmaster" class="p-4 rounded-2xl bg-[#0e345e]/75 border border-cyan-400/30 flex items-start gap-3.5 transition-all opacity-50 grayscale">
+          <div class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 badge-icon">
+            <i data-lucide="crown" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-0.5">
+            <div class="font-display font-bold text-sm text-white badge-title">Grand Master Strategist</div>
+            <p class="text-xs text-zinc-300">Fully decrypt 100% of the entire portfolio dossier.</p>
+            <div class="text-[10px] font-mono text-zinc-400 status-text">Locked 🔒</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN SCROLLABLE CONTAINER ==================== -->
+  <main class="pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 lg:px-12 space-y-36">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="pt-10 md:pt-16 pb-12 border-b border-borderSubtle relative">
+      <div class="absolute top-1/4 left-1/3 -translate-x-1/2 w-80 h-80 bg-zinc-800/20 blur-[100px] -z-10 pointer-events-none rounded-full gpu-accel"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Typography & Bio Statement (7 cols) -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Category & Status Badge -->
+          <div class="flex flex-wrap items-center gap-3 font-mono text-xs">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface border border-borderSubtle text-zinc-300">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              Available for Global Trade Advisory 2026
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface/60 border border-borderSubtle text-zinc-400">
+              Hanoi, Vietnam (FTU)
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface/60 border border-cyan-500/30 text-cyan-300 flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span>D.O.B: 10/12/2006</span>
+            </span>
+          </div>
+
+          <!-- Giant Editorial Headline with Zero Font Corruption -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-black tight-heading leading-[1.05] text-white uppercase tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+              NGUYEN THI <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-emerald-300 drop-shadow-[0_0_35px_rgba(56,189,248,0.45)]">
+                MINH NGUYET
+              </span>
+            </h1>
+            <p class="font-mono text-xs md:text-sm text-cyan-300 uppercase tracking-widest pt-2 font-medium">
+              International Economics · Global Trade & Customs Advisory
+            </p>
+          </div>
+
+          <!-- Bio Pitch -->
+          <p class="text-base sm:text-lg text-zinc-300 font-light leading-relaxed max-w-2xl text-balance">
+            Honors Scholar in <strong class="text-white font-medium">International Business and Economics</strong> at Foreign Trade University (FTU). <strong class="text-white font-medium">Global Trade Advisory Intern at Deloitte Vietnam</strong>, bridging quantitative trade policy, Free Trade Agreements (FTAs), HS code classification, and non-tariff measures (NTMs).
+          </p>
+
+          <!-- Core Metric Badges Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-surface border border-borderSubtle hover:border-cyan-500/40 transition-all interactive-card">
+              <div class="font-mono text-[11px] text-zinc-400 uppercase">FTU GPA</div>
+              <div class="font-display font-bold text-xl text-zinc-100">3.86 <span class="text-xs font-mono text-zinc-400 font-normal">/ 4.0</span></div>
+              <div class="text-[12px] text-cyan-300 font-mono font-medium mt-0.5 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span>GPA 9.06 / 10</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-surface border border-borderSubtle hover:border-zinc-500/40 transition-all interactive-card">
+              <div class="font-mono text-[11px] text-zinc-500 uppercase">English</div>
+              <div class="font-display font-bold text-xl text-zinc-100">IELTS 7.5</div>
+              <div class="text-[11px] text-zinc-400 font-mono mt-0.5">L&R 8.5 · W 7.0</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-surface border border-borderSubtle hover:border-zinc-500/40 transition-all interactive-card">
+              <div class="font-mono text-[11px] text-zinc-500 uppercase">Deloitte GTA</div>
+              <div class="font-display font-bold text-xl text-zinc-100">Intern</div>
+              <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Customs Advisory</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-surface border border-borderSubtle hover:border-zinc-500/40 transition-all interactive-card">
+              <div class="font-mono text-[11px] text-zinc-500 uppercase">Vinamilk UAE Case</div>
+              <div class="font-display font-bold text-xl text-zinc-100">9.4 <span class="text-xs font-mono text-zinc-500 font-normal">/ 10</span></div>
+              <div class="text-[11px] text-amber-300 font-mono mt-0.5">High Honors</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#case-study" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase bg-white text-zinc-950 font-semibold hover:bg-zinc-200 transition-all shadow-lg hover:shadow-white/10 interactive-card">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>Explore Vinamilk Case</span>
+            </a>
+            
+            <button onclick="toggleBgm()" class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-mono uppercase bg-surface border border-borderSubtle text-zinc-300 hover:text-white hover:border-emerald-500 transition-all interactive-card">
+              <i data-lucide="volume-2" class="w-4 h-4 text-emerald-400"></i>
+              <span>Play Background Music</span>
+            </button>
+
+            <button onclick="copyToClipboard('minhnguyetng.ftu@gmail.com', 'Copied Email: minhnguyetng.ftu@gmail.com!')" class="inline-flex items-center gap-2 px-4 py-3 rounded-full text-xs font-mono text-zinc-400 hover:text-white transition-all interactive-card">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Column: User Portrait Frame (5 cols) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm sm:max-w-md group interactive-card">
+            
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-b from-zinc-700/20 to-zinc-900/50 blur-xl opacity-75 group-hover:opacity-100 transition duration-500 -z-10 gpu-accel"></div>
+            
+            <div class="relative rounded-2xl bg-surface border border-borderHighlight overflow-hidden p-3 shadow-2xl backdrop-blur-sm">
+              
+              <div class="flex items-center justify-between px-3 py-2 border-b border-borderSubtle mb-3 font-mono text-[11px] text-zinc-400">
+                <span class="flex items-center gap-1.5 text-zinc-300">
+                  <i data-lucide="camera" class="w-3.5 h-3.5 text-zinc-400"></i>
+                  PORTRAIT ARCHIVE
+                </span>
+                <span class="text-zinc-500 font-mono">FIG. 01 / 2026</span>
+              </div>
+
+              <div class="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-zinc-900 border border-borderSubtle">
+                <img 
+                  id="portrait-img"
+                  src="./avatar.jpg" 
+                  alt="Portrait of Nguyen Thi Minh Nguyet"
+                  onerror="this.onerror=null; this.src='C:/Users/ADMIN/.gemini/antigravity/scratch/minh-nguyet-portfolio/avatar.jpg';" 
+                  class="w-full h-full object-cover object-center filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out"
+                />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+
+                <div class="absolute bottom-4 left-4 right-4 text-left pointer-events-none">
+                  <div class="font-display font-extrabold text-sm text-white tracking-wide uppercase">
+                    NGUYEN THI MINH NGUYET
+                  </div>
+                  <div class="font-mono text-[10px] text-zinc-300 flex items-center justify-between mt-0.5">
+                    <span>Foreign Trade University (FTU)</span>
+                    <span class="text-emerald-400 font-semibold">● Active</span>
+                  </div>
+                </div>
+
+                <div class="absolute top-2 left-2 w-2 h-2 border-t border-l border-white/40 pointer-events-none"></div>
+                <div class="absolute top-2 right-2 w-2 h-2 border-t border-r border-white/40 pointer-events-none"></div>
+                <div class="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-white/40 pointer-events-none"></div>
+                <div class="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-white/40 pointer-events-none"></div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 mt-3 pt-2 text-[10px] font-mono text-zinc-400 border-t border-borderSubtle">
+                <div>
+                  <span class="text-zinc-500 block uppercase">D.O.B:</span>
+                  <span class="text-cyan-300 font-semibold">10/12/2006</span>
+                </div>
+                <div class="col-span-2">
+                  <span class="text-zinc-500 block lowercase font-mono text-[10px]">major:</span>
+                  <span class="text-cyan-200 font-medium">international business and economics</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== SECTION 01: ABOUT & FOUNDATION ==================== -->
+    <section id="about" class="space-y-12">
+      <!-- High-Contrast Executive Header Plaque -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0d3666]/90 via-[#0a2b54]/85 to-[#072244]/90 backdrop-blur-xl border border-cyan-400/40 shadow-[0_12px_36px_rgba(4,20,48,0.45),inset_0_1px_1px_rgba(255,255,255,0.2)] flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-header">
+        <div>
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#0a294d] border border-cyan-400/50 text-cyan-300 font-mono text-xs font-extrabold tracking-widest uppercase shadow-[0_0_20px_rgba(56,189,248,0.3)] mb-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            01 / FOUNDATION & TRAJECTORY
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            Academic Foundation & Vision
+          </h2>
+        </div>
+        <p class="text-sm font-sans text-slate-200 max-w-md drop-shadow font-normal leading-relaxed">
+          Synthesizing quantitative trade policy analysis with humanistic insight drawn from classical and contemporary literature.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: FTU Academic (3D Flip Card) -->
+        <div class="flip-card-wrapper h-full reveal-card stagger-1" data-card-id="sec1-academic">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 rounded-3xl bg-gradient-to-br from-[#124275]/90 via-[#0e335e]/85 to-[#082447]/90 backdrop-blur-xl border border-cyan-300/40 shadow-[0_16px_40px_rgba(4,20,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[350px]">
+              <div class="absolute inset-0 bg-radial-gradient from-cyan-400/25 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-300/80"></div>
+
+              <div class="relative w-18 h-18 rounded-full border-2 border-cyan-300/70 bg-cyan-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(56,189,248,0.45)] group-hover:scale-110 group-hover:border-cyan-200 transition-all duration-500">
+                <div class="w-12 h-12 rounded-full border border-cyan-200/50 flex items-center justify-center">
+                  <i data-lucide="graduation-cap" class="w-6 h-6 text-cyan-200 animate-pulse"></i>
+                </div>
+              </div>
+
+              <div class="mt-4 text-center space-y-1 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-[10px] font-mono tracking-widest text-cyan-200 font-semibold uppercase">01-A · Academic Horizon</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Foreign Trade University</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">Honors Curriculum · D.O.B 10/12/2006</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 rounded-3xl bg-gradient-to-br from-[#0e3666]/95 via-[#0a2a52]/95 to-[#071f3f]/95 backdrop-blur-2xl border border-cyan-300/50 flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-10 h-10 rounded-xl bg-[#072447] border border-cyan-400/40 flex items-center justify-center text-cyan-300">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                  </div>
+                  <span class="flip-hint-pill">Close ↺</span>
+                </div>
+                <h3 class="font-display font-bold text-xl text-white">Foreign Trade University</h3>
+                <p class="text-xs font-mono text-cyan-300">2024 — 2028 · International Business and Economics (Honors)</p>
+                <p class="text-sm text-zinc-100 leading-relaxed font-normal">
+                  High-quality curriculum with top marks: International Trade Transactions (9.5/10), International Trade Policies (9.4/10).
+                </p>
+              </div>
+              <div class="pt-4 border-t border-borderSubtle flex items-center justify-between text-xs font-mono text-zinc-300">
+                <span>D.O.B: <strong class="text-cyan-300 font-semibold">10/12/2006</strong></span>
+                <span class="text-white font-bold">GPA 3.86 / 4.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Customs & Trade Advisory (3D Flip Card) -->
+        <div class="flip-card-wrapper h-full reveal-card stagger-2" data-card-id="sec1-customs">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 rounded-3xl bg-gradient-to-br from-[#0e4b66]/90 via-[#0a3a50]/85 to-[#072a3c]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_16px_40px_rgba(4,28,40,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group">
+              <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-emerald-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-emerald-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-emerald-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-emerald-300/80"></div>
+
+              <div class="relative w-18 h-18 rounded-full border-2 border-emerald-300/70 bg-emerald-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(52,211,153,0.4)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                <div class="w-12 h-12 rounded-full border border-emerald-200/50 flex items-center justify-center">
+                  <i data-lucide="shield" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                </div>
+              </div>
+
+              <div class="mt-4 text-center space-y-1 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-[10px] font-mono tracking-widest text-emerald-200 font-semibold uppercase">01-B · Milestone 2026</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Customs & Trade Advisory</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">Deloitte GTA · HS Code & C/O Rules</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 rounded-3xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-2xl border border-emerald-300/50 flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-10 h-10 rounded-xl bg-[#082a3c] border border-emerald-400/40 flex items-center justify-center text-emerald-300">
+                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                  </div>
+                  <span class="flip-hint-pill">Close ↺</span>
+                </div>
+                <h3 class="font-display font-bold text-xl text-white">Customs & Trade Advisory</h3>
+                <p class="text-xs font-mono text-emerald-300">Near-Term Milestone · 2026</p>
+                <p class="text-sm text-zinc-100 leading-relaxed font-normal">
+                  Practicing at Deloitte Global Trade Advisory. Mastering HS Code classification, post-clearance audit preparedness, and Rules of Origin (C/O) under EVFTA, CPTPP, RCEP, and CEPA.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-borderSubtle flex items-center justify-between text-xs font-mono text-zinc-300">
+                <span>Field</span>
+                <span class="text-emerald-300 font-mono font-semibold">Customs & Trade Compliance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Trade Finance Specialist (3D Flip Card) -->
+        <div class="flip-card-wrapper h-full reveal-card stagger-3" data-card-id="sec1-tradefinance">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 rounded-3xl bg-gradient-to-br from-[#124275]/90 via-[#0e335e]/85 to-[#082447]/90 backdrop-blur-xl border border-cyan-300/40 shadow-[0_16px_40px_rgba(4,20,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group">
+              <div class="absolute inset-0 bg-radial-gradient from-cyan-400/20 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-300/80"></div>
+
+              <div class="relative w-18 h-18 rounded-full border-2 border-cyan-300/70 bg-cyan-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(56,189,248,0.4)] group-hover:scale-110 group-hover:border-cyan-200 transition-all duration-500">
+                <div class="w-12 h-12 rounded-full border border-cyan-200/50 flex items-center justify-center">
+                  <i data-lucide="globe" class="w-6 h-6 text-cyan-200 animate-pulse"></i>
+                </div>
+              </div>
+
+              <div class="mt-4 text-center space-y-1 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-[10px] font-mono tracking-widest text-cyan-200 font-semibold uppercase">01-C · Horizon 2028-2031</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Trade Finance Specialist</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">Risk Mitigation · Cross-Border Supply Chain</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 rounded-3xl bg-gradient-to-br from-[#0e3666]/95 via-[#0a2a52]/95 to-[#071f3f]/95 backdrop-blur-2xl border border-cyan-300/50 flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-10 h-10 rounded-xl bg-[#072447] border border-cyan-400/40 flex items-center justify-center text-cyan-300">
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                  </div>
+                  <span class="flip-hint-pill">Close ↺</span>
+                </div>
+                <h3 class="font-display font-bold text-xl text-white">Trade Finance Specialist</h3>
+                <p class="text-xs font-mono text-cyan-300">3-5 Year Horizon · 2028 - 2031</p>
+                <p class="text-sm text-zinc-100 leading-relaxed font-normal">
+                  Evolving into a cross-border trade finance strategist, engineering payment risk mitigation mechanisms (L/C, T/T, CAD), and optimizing multinational supply chains.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-borderSubtle flex items-center justify-between text-xs font-mono text-zinc-300">
+                <span>Aspiration</span>
+                <span class="text-cyan-300 font-mono font-semibold">Cross-Border Trade Advisor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== SECTION 02: PROFESSIONAL EXPERIENCE (DELOITTE) ==================== -->
+    <section id="experience" class="space-y-12">
+      <!-- High-Contrast Executive Header Plaque -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0d3b4e]/90 via-[#0a2f40]/85 to-[#072433]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_16px_40px_rgba(4,28,40,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-header">
+        <div>
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#082a3c] border-2 border-emerald-300 text-emerald-200 font-mono text-xs font-extrabold tracking-widest uppercase shadow-[0_0_20px_rgba(52,211,153,0.35)] mb-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-pulse"></span>
+            02 / CORPORATE PRACTICE & EXPERIENCE
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            Deloitte Vietnam Experience
+          </h2>
+        </div>
+        <div class="px-4 py-2 rounded-full bg-[#082a3c] border border-emerald-300/50 text-emerald-200 font-mono font-bold text-xs shadow-md">
+          DELOITTE TAX ADVISORY CO., LTD · 2026
+        </div>
+      </div>
+
+      <div class="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-[#0c314a]/75 via-[#082438]/70 to-[#051928]/75 backdrop-blur-xl border border-emerald-300/30 relative overflow-hidden shadow-[0_20px_50px_rgba(4,24,36,0.4)]">
+        <div class="absolute -top-12 -right-12 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none gpu-accel"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Left Column: Deloitte Overview (3D Flip Card) -->
+          <div class="lg:col-span-4 flip-card-wrapper h-full reveal-card stagger-1" data-card-id="sec2-deloitte-overview">
+            <div class="flip-card-inner">
+              <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+              <div class="flip-card-front p-8 rounded-3xl bg-gradient-to-br from-[#0e4b66]/90 via-[#0a3a50]/85 to-[#072a3c]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_16px_40px_rgba(4,28,40,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group">
+                <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-emerald-300/80"></div>
+                <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-emerald-300/80"></div>
+                <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-emerald-300/80"></div>
+                <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-emerald-300/80"></div>
+
+                <div class="relative w-20 h-20 rounded-full border-2 border-emerald-300/70 bg-emerald-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(52,211,153,0.4)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                  <div class="w-12 h-12 rounded-full border border-emerald-200/50 flex items-center justify-center">
+                    <i data-lucide="shield" class="w-7 h-7 text-emerald-200 animate-pulse"></i>
+                  </div>
+                </div>
+
+                <div class="mt-4 text-center space-y-1 z-10">
+                  <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-[10px] font-mono tracking-widest text-emerald-200 font-semibold uppercase">02-A · Big 4 Practice</span>
+                  <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Deloitte Vietnam</h4>
+                  <p class="text-xs text-slate-200 font-sans font-medium">Global Trade Advisory (GTA) Intern · 2026</p>
+                </div>
+
+                <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                  <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+                </div>
+              </div>
+
+              <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+              <div class="flip-card-back p-8 rounded-3xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-2xl border border-emerald-300/50 space-y-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#082a3c] border border-emerald-400/40 text-xs font-mono text-emerald-300">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Official Internship
+                    </div>
+                    <span class="flip-hint-pill">Close ↺</span>
+                  </div>
+
+                  <div>
+                    <h3 class="text-2xl font-display font-bold text-white">Deloitte Vietnam</h3>
+                    <p class="font-mono text-xs text-zinc-300 mt-1">Deloitte Tax Advisory Co., Ltd</p>
+                    <div class="font-sans font-semibold text-lg text-emerald-300 mt-2">
+                      Global Trade Advisory (GTA) Intern
+                    </div>
+                  </div>
+
+                  <p class="text-sm text-zinc-100 font-normal leading-relaxed">
+                    Assigned to assist professional engagements across tax, customs compliance, and global trade advisory for multinational corporate clients.
+                  </p>
+
+                  <div class="p-4 rounded-xl bg-[#072233]/90 border border-emerald-400/30 font-mono text-xs space-y-2">
+                    <div class="text-emerald-300 font-bold uppercase">Core Practice Areas:</div>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Tax & Customs Research</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Tax Returns</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Customs Declarations</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Tax Health-Check</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Advisory Memorandums</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200">Client Fieldwork</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-4 border-t border-borderSubtle text-xs font-mono text-zinc-300 flex justify-between items-center">
+                  <span>Standard</span>
+                  <span class="text-emerald-300 font-semibold">Big 4 Professional Rigor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 6 Assigned Duties (3D Flip Cards Grid) -->
+          <div class="lg:col-span-8 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-borderSubtle pb-2">
+              <h4 class="font-mono text-xs text-emerald-200 font-bold uppercase tracking-wider">Official Role & Assigned Responsibilities:</h4>
+              <span class="font-mono text-xs text-emerald-300">Hover or click any card to flip ↺</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              
+              <!-- 01: Research (3D Flip Card) -->
+              <div class="flip-card-wrapper h-full reveal-card stagger-1" data-card-id="sec2-duty1">
+                <div class="flip-card-inner">
+                  <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+                  <div class="flip-card-front p-6 rounded-2xl bg-gradient-to-br from-[#0f445c]/90 via-[#0a3347]/85 to-[#072535]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_12px_30px_rgba(4,28,40,0.4),inset_0_1px_1px_rgba(255,255,255,0.18)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[190px]">
+                    <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-emerald-300/80"></div>
+                    <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-emerald-300/80"></div>
+
+                    <div class="relative w-14 h-14 rounded-full border-2 border-emerald-300/60 bg-emerald-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.3)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                      <i data-lucide="search" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                    </div>
+                    <div class="font-mono text-xs text-emerald-200 font-bold uppercase tracking-wider mt-3">01 / Tax & Trade Research</div>
+                  </div>
+
+                  <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+                  <div class="flip-card-back p-5 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-xl border border-emerald-300/40 flex flex-col justify-between space-y-2 shadow-xl relative overflow-hidden">
+                    <div>
+                      <div class="flex items-center justify-between font-mono text-xs text-emerald-300 mb-1.5">
+                        <span class="flex items-center gap-1.5 font-bold"><i data-lucide="search" class="w-4 h-4"></i> 01 / TAX & TRADE RESEARCH</span>
+                        <span class="flip-hint-pill">Close ↺</span>
+                      </div>
+                      <h5 class="font-bold text-sm text-white">Research on Tax, Customs & Global Trade</h5>
+                      <p class="text-xs text-zinc-100 leading-relaxed font-normal mt-1">
+                        Perform research on tax, customs, global trade, and cross-border business-related issues, statutory regulations, and international commercial policies.
+                      </p>
+                    </div>
+                    <div class="text-[10px] font-mono text-emerald-300 font-medium pt-1.5 border-t border-emerald-500/20">Assigned Professional Task</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 02: Tax Returns & Customs Declaration (3D Flip Card) -->
+              <div class="flip-card-wrapper h-full reveal-card stagger-2" data-card-id="sec2-duty2">
+                <div class="flip-card-inner">
+                  <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+                  <div class="flip-card-front p-6 rounded-2xl bg-gradient-to-br from-[#0f445c]/90 via-[#0a3347]/85 to-[#072535]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_12px_30px_rgba(4,28,40,0.4),inset_0_1px_1px_rgba(255,255,255,0.18)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[190px]">
+                    <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-emerald-300/80"></div>
+                    <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-emerald-300/80"></div>
+
+                    <div class="relative w-14 h-14 rounded-full border-2 border-emerald-300/60 bg-emerald-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.3)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                      <i data-lucide="file-check" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                    </div>
+                    <div class="font-mono text-xs text-emerald-200 font-bold uppercase tracking-wider mt-3">02 / Statutory Compliance</div>
+                  </div>
+
+                  <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+                  <div class="flip-card-back p-5 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-xl border border-emerald-300/40 flex flex-col justify-between space-y-2 shadow-xl relative overflow-hidden">
+                    <div>
+                      <div class="flex items-center justify-between font-mono text-xs text-emerald-300 mb-1.5">
+                        <span class="flex items-center gap-1.5 font-bold"><i data-lucide="file-check" class="w-4 h-4"></i> 02 / STATUTORY COMPLIANCE</span>
+                        <span class="flip-hint-pill">Close ↺</span>
+                      </div>
+                      <h5 class="font-bold text-sm text-white">Tax Returns & Customs Declarations</h5>
+                      <p class="text-xs text-zinc-100 leading-relaxed font-normal mt-1">
+                        Assist with the preparation of tax returns, customs declaration, and other tax and customs compliance work for multinational corporate clients.
+                      </p>
+                    </div>
+                    <div class="text-[10px] font-mono text-emerald-300 font-medium pt-1.5 border-t border-emerald-500/20">Assigned Professional Task</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 03: Review & Health-Check (3D Flip Card) -->
+              <div class="flip-card-wrapper h-full reveal-card stagger-3" data-card-id="sec2-duty3">
+                <div class="flip-card-inner">
+                  <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+                  <div class="flip-card-front p-6 rounded-2xl bg-gradient-to-br from-[#0f445c]/90 via-[#0a3347]/85 to-[#072535]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_12px_30px_rgba(4,28,40,0.4),inset_0_1px_1px_rgba(255,255,255,0.18)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[190px]">
+                    <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-emerald-300/80"></div>
+                    <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-emerald-300/80"></div>
+
+                    <div class="relative w-14 h-14 rounded-full border-2 border-emerald-300/60 bg-emerald-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.3)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                      <i data-lucide="shield-alert" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                    </div>
+                    <div class="font-mono text-xs text-emerald-200 font-bold uppercase tracking-wider mt-3">03 / Review & Health-Check</div>
+                  </div>
+
+                  <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+                  <div class="flip-card-back p-5 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-xl border border-emerald-300/40 flex flex-col justify-between space-y-2 shadow-xl relative overflow-hidden">
+                    <div>
+                      <div class="flex items-center justify-between font-mono text-xs text-emerald-300 mb-1.5">
+                        <span class="flex items-center gap-1.5 font-bold"><i data-lucide="shield-alert" class="w-4 h-4"></i> 03 / REVIEW & HEALTH-CHECK</span>
+                        <span class="flip-hint-pill">Close ↺</span>
+                      </div>
+                      <h5 class="font-bold text-sm text-white">Tax & Customs Health-Check</h5>
+                      <p class="text-xs text-zinc-100 leading-relaxed font-normal mt-1">
+                        Assist tax consultants to perform tax, customs review, and comprehensive tax health-checks on clients' tax and regulatory exposure.
+                      </p>
+                    </div>
+                    <div class="text-[10px] font-mono text-emerald-300 font-medium pt-1.5 border-t border-emerald-500/20">Assigned Professional Task</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 04: Advisory (3D Flip Card) -->
+              <div class="flip-card-wrapper h-full reveal-card stagger-4" data-card-id="sec2-duty4">
+                <div class="flip-card-inner">
+                  <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+                  <div class="flip-card-front p-6 rounded-2xl bg-gradient-to-br from-[#0f445c]/90 via-[#0a3347]/85 to-[#072535]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_12px_30px_rgba(4,28,40,0.4),inset_0_1px_1px_rgba(255,255,255,0.18)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[190px]">
+                    <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-emerald-300/80"></div>
+                    <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-emerald-300/80"></div>
+
+                    <div class="relative w-14 h-14 rounded-full border-2 border-emerald-300/60 bg-emerald-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.3)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                      <i data-lucide="briefcase" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                    </div>
+                    <div class="font-mono text-xs text-emerald-200 font-bold uppercase tracking-wider mt-3">04 / Advisory Memorandums</div>
+                  </div>
+
+                  <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+                  <div class="flip-card-back p-5 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-xl border border-emerald-300/40 flex flex-col justify-between space-y-2 shadow-xl relative overflow-hidden">
+                    <div>
+                      <div class="flex items-center justify-between font-mono text-xs text-emerald-300 mb-1.5">
+                        <span class="flex items-center gap-1.5 font-bold"><i data-lucide="briefcase" class="w-4 h-4"></i> 04 / ADVISORY MEMORANDUMS</span>
+                        <span class="flip-hint-pill">Close ↺</span>
+                      </div>
+                      <h5 class="font-bold text-sm text-white">Tax & Customs Advisory Support</h5>
+                      <p class="text-xs text-zinc-100 leading-relaxed font-normal mt-1">
+                        Assist in preparing tax and customs advisory reports, technical analyses, and client memorandums on fiscal and trade optimization.
+                      </p>
+                    </div>
+                    <div class="text-[10px] font-mono text-emerald-300 font-medium pt-1.5 border-t border-emerald-500/20">Assigned Professional Task</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 05: Fieldwork (3D Flip Card) -->
+              <div class="flip-card-wrapper h-full reveal-card stagger-5" data-card-id="sec2-duty5">
+                <div class="flip-card-inner">
+                  <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+                  <div class="flip-card-front p-6 rounded-2xl bg-gradient-to-br from-[#0f445c]/90 via-[#0a3347]/85 to-[#072535]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_12px_30px_rgba(4,28,40,0.4),inset_0_1px_1px_rgba(255,255,255,0.18)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[190px]">
+                    <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-emerald-300/80"></div>
+                    <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-emerald-300/80"></div>
+
+                    <div class="relative w-14 h-14 rounded-full border-2 border-emerald-300/60 bg-emerald-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.3)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                      <i data-lucide="map-pin" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                    </div>
+                    <div class="font-mono text-xs text-emerald-200 font-bold uppercase tracking-wider mt-3">05 / Client Fieldwork</div>
+                  </div>
+
+                  <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+                  <div class="flip-card-back p-5 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-xl border border-emerald-300/40 flex flex-col justify-between space-y-2 shadow-xl relative overflow-hidden">
+                    <div>
+                      <div class="flex items-center justify-between font-mono text-xs text-emerald-300 mb-1.5">
+                        <span class="flex items-center gap-1.5 font-bold"><i data-lucide="map-pin" class="w-4 h-4"></i> 05 / CLIENT ENGAGEMENT</span>
+                        <span class="flip-hint-pill">Close ↺</span>
+                      </div>
+                      <h5 class="font-bold text-sm text-white">Fieldwork at Clients' Premises</h5>
+                      <p class="text-xs text-zinc-100 leading-relaxed font-normal mt-1">
+                        Participate in fieldwork at Clients' corporate premises, supporting on-site document verification, cargo process reviews, and stakeholder working sessions.
+                      </p>
+                    </div>
+                    <div class="text-[10px] font-mono text-emerald-300 font-medium pt-1.5 border-t border-emerald-500/20">Assigned Professional Task</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 06: Administrative (3D Flip Card) -->
+              <div class="flip-card-wrapper h-full reveal-card stagger-6" data-card-id="sec2-duty6">
+                <div class="flip-card-inner">
+                  <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+                  <div class="flip-card-front p-6 rounded-2xl bg-gradient-to-br from-[#0f445c]/90 via-[#0a3347]/85 to-[#072535]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_12px_30px_rgba(4,28,40,0.4),inset_0_1px_1px_rgba(255,255,255,0.18)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[190px]">
+                    <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-emerald-300/80"></div>
+                    <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-emerald-300/80"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-emerald-300/80"></div>
+
+                    <div class="relative w-14 h-14 rounded-full border-2 border-emerald-300/60 bg-emerald-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.3)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                      <i data-lucide="folder-check" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                    </div>
+                    <div class="font-mono text-xs text-emerald-200 font-bold uppercase tracking-wider mt-3">06 / Administrative Works</div>
+                  </div>
+
+                  <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+                  <div class="flip-card-back p-5 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-xl border border-emerald-300/40 flex flex-col justify-between space-y-2 shadow-xl relative overflow-hidden">
+                    <div>
+                      <div class="flex items-center justify-between font-mono text-xs text-emerald-300 mb-1.5">
+                        <span class="flex items-center gap-1.5 font-bold"><i data-lucide="folder-check" class="w-4 h-4"></i> 06 / ENGAGEMENT ADMINISTRATION</span>
+                        <span class="flip-hint-pill">Close ↺</span>
+                      </div>
+                      <h5 class="font-bold text-sm text-white">Job-Related Administrative Works</h5>
+                      <p class="text-xs text-zinc-100 leading-relaxed font-normal mt-1">
+                        Assist with job-related administrative works, engagement archiving, statutory compliance documentation, and project workflow coordination.
+                      </p>
+                    </div>
+                    <div class="text-[10px] font-mono text-emerald-300 font-medium pt-1.5 border-t border-emerald-500/20">Assigned Professional Task</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#072538]/90 backdrop-blur-md border-l-4 border-emerald-400 text-xs text-slate-100 font-sans leading-relaxed reveal-card stagger-6 shadow-md">
+              "Diligent adherence to statutory compliance, evidence-based research, and rigorous field verification under the global standards of Deloitte Tax Advisory."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SECTION 03: COMMUNITY LEADERSHIP ==================== -->
+    <section id="community" class="space-y-12">
+      <!-- High-Contrast Executive Header Plaque -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#123163]/90 via-[#0d234a]/85 to-[#081836]/90 backdrop-blur-xl border border-indigo-300/40 shadow-[0_16px_40px_rgba(7,20,53,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-header">
+        <div>
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#0c2349] border-2 border-indigo-300 text-indigo-200 font-mono text-xs font-extrabold tracking-widest uppercase shadow-[0_0_20px_rgba(99,102,241,0.35)] mb-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-300 animate-pulse"></span>
+            03 / LEADERSHIP & EXTRACURRICULARS
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            Student Community Leadership
+          </h2>
+        </div>
+        <div class="px-4 py-2 rounded-full bg-[#0c2349] border border-indigo-300/50 text-indigo-200 font-mono font-bold text-xs shadow-md">
+          INTERNATIONAL BUSINESS & ECONOMICS COMMUNITY · FTU
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left Column: Organizing Committee (3D Flip Card) -->
+        <div class="lg:col-span-5 flip-card-wrapper h-full reveal-card stagger-1" data-card-id="sec3-board">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 rounded-3xl bg-gradient-to-br from-[#1a4080]/90 via-[#133066]/85 to-[#0d224d]/90 backdrop-blur-xl border border-indigo-300/40 shadow-[0_16px_40px_rgba(7,20,53,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[380px]">
+              <div class="absolute inset-0 bg-radial-gradient from-indigo-400/20 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-indigo-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-indigo-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-indigo-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-indigo-300/80"></div>
+
+              <div class="relative w-20 h-20 rounded-full border-2 border-indigo-300/70 bg-indigo-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(129,140,248,0.4)] group-hover:scale-110 group-hover:border-indigo-200 transition-all duration-500">
+                <div class="w-14 h-14 rounded-full border border-indigo-200/50 flex items-center justify-center">
+                  <i data-lucide="users" class="w-7 h-7 text-indigo-200 animate-pulse"></i>
+                </div>
+              </div>
+
+              <div class="mt-4 text-center space-y-1.5 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-[10px] font-mono tracking-widest text-indigo-200 font-semibold uppercase">03-A · Executive Board</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Student Community Leadership</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">Organizing Committee · FTU Business & Economics</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 rounded-3xl bg-gradient-to-br from-[#14346e]/95 via-[#0e2654]/95 to-[#091b3f]/95 backdrop-blur-2xl border border-indigo-300/50 space-y-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-indigo-200 font-mono text-xs font-semibold">
+                    ORGANIZING COMMITTEE MEMBER
+                  </span>
+                  <span class="flip-hint-pill">Close ↺</span>
+                </div>
+
+                <h3 class="font-display font-bold text-2xl text-white">
+                  International Business & Economics Student Community
+                </h3>
+                <p class="font-sans font-medium text-indigo-200 text-sm">
+                  Foreign Trade University (FTU)
+                </p>
+
+                <p class="text-sm text-zinc-100 font-normal leading-relaxed">
+                  Active member of the Executive Organizing Committee. Spearheaded flagship cultural and experiential programs, coordinating budget allocation, vendor procurement, guest hospitality, and risk management.
+                </p>
+              </div>
+
+              <div class="space-y-3 pt-4 border-t border-borderSubtle font-mono text-xs">
+                <div class="flex justify-between text-zinc-300">
+                  <span>Scope:</span>
+                  <span class="text-white font-medium">300+ Students & Faculty</span>
+                </div>
+                <div class="flex justify-between text-zinc-300">
+                  <span>Core Strengths:</span>
+                  <span class="text-indigo-200 font-medium">Project Management, Crisis Control</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Prom & Camping (3D Flip Cards) -->
+        <div class="lg:col-span-7 flex flex-col gap-6 justify-between">
+          
+          <!-- Event 01: Prom Gala (3D Flip Card) -->
+          <div class="flip-card-wrapper reveal-card stagger-2 flex-1" data-card-id="sec3-prom">
+            <div class="flip-card-inner">
+              <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+              <div class="flip-card-front p-7 rounded-2xl bg-gradient-to-br from-[#283e66]/90 via-[#1c2e4f]/85 to-[#12203d]/90 backdrop-blur-xl border border-amber-300/40 shadow-[0_12px_30px_rgba(12,25,48,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)] flex items-center justify-between relative overflow-hidden group min-h-[170px]">
+                <div class="absolute inset-0 bg-radial-gradient from-amber-400/20 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-amber-300/80"></div>
+                <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-amber-300/80"></div>
+                <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-amber-300/80"></div>
+                <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-amber-300/80"></div>
+
+                <div class="flex items-center gap-5">
+                  <div class="relative w-14 h-14 rounded-full border-2 border-amber-300/60 bg-amber-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(251,191,36,0.35)] group-hover:scale-110 group-hover:border-amber-200 transition-all duration-500">
+                    <i data-lucide="sparkles" class="w-6 h-6 text-amber-200 animate-pulse"></i>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs text-amber-300 font-bold uppercase tracking-wider">Event Milestone 01</div>
+                    <div class="font-display font-bold text-lg text-white mt-0.5">Annual Prom & Celebration Gala Night</div>
+                    <div class="font-sans text-xs text-slate-200 font-medium">300+ Attendees · Executive Logistics</div>
+                  </div>
+                </div>
+
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+
+              <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+              <div class="flip-card-back p-6 rounded-2xl bg-gradient-to-br from-[#1e2f4f]/95 via-[#15233d]/95 to-[#0d172e]/95 backdrop-blur-xl border border-amber-300/40 space-y-3 shadow-xl relative overflow-hidden min-h-[170px]">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 font-mono text-xs text-amber-300">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span class="font-semibold uppercase">Flagship Gala & Graduation Prom</span>
+                  </div>
+                  <span class="flip-hint-pill">Close ↺</span>
+                </div>
+                <h4 class="font-display font-bold text-lg text-white">
+                  Annual Prom & Celebration Gala Night
+                </h4>
+                <p class="text-xs text-zinc-100 leading-relaxed font-normal">
+                  Managed end-to-end event operations for over 300+ attendees. Directed stage lighting, audiovisual production, seating logistics, sponsor negotiations, and master of ceremonies run-downs, ensuring an unforgettable milestone celebration.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-1 font-mono text-[10px] text-zinc-200">
+                  <span class="px-2 py-0.5 rounded bg-[#13213b] border border-amber-400/30 text-amber-200">Stage Operations</span>
+                  <span class="px-2 py-0.5 rounded bg-[#13213b] border border-amber-400/30 text-amber-200">Budgeting</span>
+                  <span class="px-2 py-0.5 rounded bg-[#13213b] border border-amber-400/30 text-amber-200">300+ Guests</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 02: Camping Expedition (3D Flip Card) -->
+          <div class="flip-card-wrapper reveal-card stagger-3 flex-1" data-card-id="sec3-camping">
+            <div class="flip-card-inner">
+              <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+              <div class="flip-card-front p-7 rounded-2xl bg-gradient-to-br from-[#0f445c]/90 via-[#0a3347]/85 to-[#072535]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_12px_30px_rgba(4,28,40,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)] flex items-center justify-between relative overflow-hidden group min-h-[170px]">
+                <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-emerald-300/80"></div>
+                <div class="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-emerald-300/80"></div>
+                <div class="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-emerald-300/80"></div>
+                <div class="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-emerald-300/80"></div>
+
+                <div class="flex items-center gap-5">
+                  <div class="relative w-14 h-14 rounded-full border-2 border-emerald-300/60 bg-emerald-500/20 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.35)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                    <i data-lucide="tent" class="w-6 h-6 text-emerald-200 animate-pulse"></i>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs text-emerald-300 font-bold uppercase tracking-wider">Event Milestone 02</div>
+                    <div class="font-display font-bold text-lg text-white mt-0.5">Wilderness Camping & Cohort Bonding Camp</div>
+                    <div class="font-sans text-xs text-slate-200 font-medium">100+ Campers · Wilderness Logistics</div>
+                  </div>
+                </div>
+
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+
+              <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+              <div class="flip-card-back p-6 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-xl border border-emerald-300/40 space-y-3 shadow-xl relative overflow-hidden min-h-[170px]">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 font-mono text-xs text-emerald-300">
+                    <i data-lucide="tent" class="w-4 h-4"></i>
+                    <span class="font-semibold uppercase">Outdoor Team-Building & Camping Expedition</span>
+                  </div>
+                  <span class="flip-hint-pill">Close ↺</span>
+                </div>
+                <h4 class="font-display font-bold text-lg text-white">
+                  Wilderness Camping & Cohort Bonding Camp
+                </h4>
+                <p class="text-xs text-zinc-100 leading-relaxed font-normal">
+                  Orchestrated experiential outdoor camping excursions and team-building challenges for 100+ students. Supervised transportation logistics, campsite reservation, safety contingency plans, and interactive leadership bonding activities.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-1 font-mono text-[10px] text-zinc-200">
+                  <span class="px-2 py-0.5 rounded bg-[#072435] border border-emerald-400/30 text-emerald-200">Wilderness Logistics</span>
+                  <span class="px-2 py-0.5 rounded bg-[#072435] border border-emerald-400/30 text-emerald-200">Risk Mitigation</span>
+                  <span class="px-2 py-0.5 rounded bg-[#072435] border border-emerald-400/30 text-emerald-200">100+ Campers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SECTION 04: CASE STUDY (VINAMILK UAE) ==================== -->
+    <section id="case-study" class="space-y-12 relative z-10 pt-6">
+      <!-- High-Contrast Executive Header Plaque -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#2a304e]/90 via-[#1f2540]/85 to-[#151a30]/90 backdrop-blur-xl border border-amber-300/40 shadow-[0_16px_40px_rgba(20,25,50,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-header">
+        <div>
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#241a06] border-2 border-amber-300 text-amber-200 font-mono text-xs font-extrabold tracking-widest uppercase shadow-[0_0_20px_rgba(251,191,36,0.35)] mb-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-300 animate-pulse"></span>
+            04 / SPOTLIGHT ACADEMIC PROJECT & TRADE SIMULATION
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            Vinamilk Expansion into the UAE
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="px-4 py-2 rounded-full bg-[#241a06] border-2 border-amber-300/60 text-amber-200 font-mono font-bold text-xs shadow-md">
+            Distinction Grade: 9.4 / 10 · High Honors
+          </span>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-gradient-to-br from-[#1c2947]/80 via-[#141f38]/75 to-[#0e172c]/80 backdrop-blur-xl border border-amber-300/30 overflow-hidden shadow-[0_20px_50px_rgba(10,20,40,0.4)]">
+        <div class="p-8 md:p-10 border-b border-amber-400/20 bg-gradient-to-r from-[#172c54]/70 via-[#112242]/60 to-[#172c54]/70 backdrop-blur-md reveal-card stagger-1">
+          <div class="max-w-4xl space-y-4">
+            <div class="font-mono text-xs text-amber-300 flex items-center gap-2 font-bold tracking-wide">
+              <span>[ FTU HIGH-HONORS STRATEGIC CASE ]</span>
+              <span>·</span>
+              <span class="text-zinc-200">Trade Policy & Market Penetration Research</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-display font-black text-white leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+              Navigating Trade Barriers: A Strategic Case Study of Vinamilk in the United Arab Emirates (UAE)
+            </h3>
+            <p class="text-sm text-zinc-100 font-normal leading-relaxed">
+              Comprehensive analysis of GCC 5% common external tariffs, the Vietnam-UAE Comprehensive Economic Partnership Agreement (CEPA), and compliance mechanisms for stringent Non-Tariff Measures (NTMs), including Halal ESMA standards (UAE.S 5012:2014) and bilingual Arabic-English packaging regulations.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-8 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Case Card 1: Tariff Dynamics (3D Flip Card) -->
+          <div class="flip-card-wrapper h-full reveal-card stagger-2" data-card-id="sec4-tariff">
+            <div class="flip-card-inner">
+              <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+              <div class="flip-card-front p-8 rounded-2xl bg-gradient-to-br from-[#0e4b66]/90 via-[#0a3a50]/85 to-[#072a3c]/90 backdrop-blur-xl border border-emerald-300/40 shadow-[0_16px_40px_rgba(4,28,40,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[320px]">
+                <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-emerald-300/80"></div>
+                <div class="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-emerald-300/80"></div>
+                <div class="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-emerald-300/80"></div>
+                <div class="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-emerald-300/80"></div>
+
+                <div class="relative w-16 h-16 rounded-full border-2 border-emerald-300/70 bg-emerald-500/25 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.4)] group-hover:scale-110 group-hover:border-emerald-200 transition-all duration-500">
+                  <i data-lucide="calculator" class="w-7 h-7 text-emerald-200 animate-pulse"></i>
+                </div>
+
+                <div class="mt-4 text-center space-y-1 z-10">
+                  <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-[10px] font-mono tracking-widest text-emerald-200 font-semibold uppercase">04-A · Tariff Dynamics</span>
+                  <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">GCC Tariff & CEPA Roadmap</h4>
+                  <p class="text-xs text-slate-200 font-sans font-medium">5% External Tariff to 0% CEPA Benefit</p>
+                </div>
+
+                <div class="absolute bottom-3 inset-x-0 flex items-center justify-center pointer-events-none">
+                  <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+                </div>
+              </div>
+
+              <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+              <div class="flip-card-back p-6 rounded-2xl bg-gradient-to-br from-[#0c3e57]/95 via-[#093145]/95 to-[#062334]/95 backdrop-blur-2xl border border-emerald-300/50 flex flex-col justify-between space-y-4 shadow-xl relative overflow-hidden">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between font-display font-bold text-base text-white">
+                    <span class="flex items-center gap-2"><i data-lucide="percent" class="w-4 h-4 text-emerald-300"></i> GCC Tariff & CEPA</span>
+                    <span class="flip-hint-pill">Close ↺</span>
+                  </div>
+                  <p class="text-xs text-zinc-100 leading-relaxed font-normal">
+                    Prior to CEPA, Vinamilk’s dairy consignments faced a standard <strong class="text-white font-medium">5% GCC external tariff</strong>.
+                  </p>
+                  <div class="p-4 rounded-xl bg-[#082a3c] border border-emerald-400/30 space-y-2 font-mono text-xs">
+                    <div class="flex justify-between text-zinc-300">
+                      <span>Standard Tariff:</span>
+                      <span class="text-white font-bold">5.0%</span>
+                    </div>
+                    <div class="flex justify-between text-zinc-300">
+                      <span>CEPA Roadmap:</span>
+                      <span class="text-emerald-300 font-bold">0% within 3-5y</span>
+                    </div>
+                    <div class="flex justify-between text-zinc-300">
+                      <span>Margin Gain:</span>
+                      <span class="text-cyan-300 font-bold">+12% margin</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-[10px] font-mono text-emerald-300 pt-2 border-t border-emerald-500/20 font-medium">Trade Policy Simulation</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Card 2: Halal & TBT (3D Flip Card) -->
+          <div class="flip-card-wrapper h-full reveal-card stagger-3" data-card-id="sec4-halal">
+            <div class="flip-card-inner">
+              <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+              <div class="flip-card-front p-8 rounded-2xl bg-gradient-to-br from-[#283e66]/90 via-[#1c2e4f]/85 to-[#12203d]/90 backdrop-blur-xl border border-amber-300/40 shadow-[0_16px_40px_rgba(12,25,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[320px]">
+                <div class="absolute inset-0 bg-radial-gradient from-amber-400/20 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-amber-300/80"></div>
+                <div class="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-amber-300/80"></div>
+                <div class="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-amber-300/80"></div>
+                <div class="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-amber-300/80"></div>
+
+                <div class="relative w-16 h-16 rounded-full border-2 border-amber-300/70 bg-amber-500/25 flex items-center justify-center shadow-[0_0_25px_rgba(251,191,36,0.35)] group-hover:scale-110 group-hover:border-amber-200 transition-all duration-500">
+                  <i data-lucide="shield-check" class="w-7 h-7 text-amber-200 animate-pulse"></i>
+                </div>
+
+                <div class="mt-4 text-center space-y-1 z-10">
+                  <span class="inline-block px-3 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-[10px] font-mono tracking-widest text-amber-200 font-semibold uppercase">04-B · Technical Barriers</span>
+                  <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Halal ESMA & Non-Tariff Measures</h4>
+                  <p class="text-xs text-slate-200 font-sans font-medium">UAE.S 5012:2014 & Bilingual Packaging</p>
+                </div>
+
+                <div class="absolute bottom-3 inset-x-0 flex items-center justify-center pointer-events-none">
+                  <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+                </div>
+              </div>
+
+              <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+              <div class="flip-card-back p-6 rounded-2xl bg-gradient-to-br from-[#1e2f4f]/95 via-[#15233d]/95 to-[#0d172e]/95 backdrop-blur-2xl border border-amber-300/50 flex flex-col justify-between space-y-4 shadow-xl relative overflow-hidden">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between font-display font-bold text-base text-white">
+                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-amber-300"></i> Halal & NTMs</span>
+                    <span class="flip-hint-pill">Close ↺</span>
+                  </div>
+                  <p class="text-xs text-zinc-100 leading-relaxed font-normal">
+                    Ensuring compliance with Emirates Authority for Standardization and Metrology (ESMA) regarding food safety & trace ingredients.
+                  </p>
+                  <div class="p-4 rounded-xl bg-[#13213b] border border-amber-400/30 space-y-2 font-mono text-xs">
+                    <div class="flex justify-between text-zinc-300">
+                      <span>Halal Standard:</span>
+                      <span class="text-white font-bold">UAE.S 5012:2014</span>
+                    </div>
+                    <div class="flex justify-between text-zinc-300">
+                      <span>Packaging:</span>
+                      <span class="text-amber-300 font-bold">Bilingual Ar-En</span>
+                    </div>
+                    <div class="flex justify-between text-zinc-300">
+                      <span>Port Shelf Life:</span>
+                      <span class="text-white font-bold">&ge; 70% arrival</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-[10px] font-mono text-amber-300 pt-2 border-t border-amber-500/20 font-medium">Technical Barriers (SPS/TBT)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Card 3: Trade Intelligence Tools (3D Flip Card) -->
+          <div class="flip-card-wrapper h-full reveal-card stagger-4" data-card-id="sec4-tools">
+            <div class="flip-card-inner">
+              <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+              <div class="flip-card-front p-8 rounded-2xl bg-gradient-to-br from-[#124275]/90 via-[#0e335e]/85 to-[#082447]/90 backdrop-blur-xl border border-cyan-300/40 shadow-[0_16px_40px_rgba(4,20,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[320px]">
+                <div class="absolute inset-0 bg-radial-gradient from-cyan-400/20 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-cyan-300/80"></div>
+                <div class="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-cyan-300/80"></div>
+                <div class="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-cyan-300/80"></div>
+                <div class="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-cyan-300/80"></div>
+
+                <div class="relative w-16 h-16 rounded-full border-2 border-cyan-300/70 bg-cyan-500/25 flex items-center justify-center shadow-[0_0_25px_rgba(56,189,248,0.4)] group-hover:scale-110 group-hover:border-cyan-200 transition-all duration-500">
+                  <i data-lucide="line-chart" class="w-7 h-7 text-cyan-200 animate-pulse"></i>
+                </div>
+
+                <div class="mt-4 text-center space-y-1 z-10">
+                  <span class="inline-block px-3 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-[10px] font-mono tracking-widest text-cyan-200 font-semibold uppercase">04-C · Trade Intelligence</span>
+                  <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Multilateral Trade Flow Modeling</h4>
+                  <p class="text-xs text-slate-200 font-sans font-medium">ITC TradeMap, MacMap & UN Comtrade</p>
+                </div>
+
+                <div class="absolute bottom-3 inset-x-0 flex items-center justify-center pointer-events-none">
+                  <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+                </div>
+              </div>
+
+              <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+              <div class="flip-card-back p-6 rounded-2xl bg-gradient-to-br from-[#0e3666]/95 via-[#0a2a52]/95 to-[#071f3f]/95 backdrop-blur-2xl border border-cyan-300/50 flex flex-col justify-between space-y-4 shadow-xl relative overflow-hidden">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between font-display font-bold text-base text-white">
+                    <span class="flex items-center gap-2"><i data-lucide="database" class="w-4 h-4 text-cyan-300"></i> Trade Intelligence</span>
+                    <span class="flip-hint-pill">Close ↺</span>
+                  </div>
+                  <p class="text-xs text-zinc-100 leading-relaxed font-normal">
+                    Extracting multilateral trade flows and market access indicators for dairy products into Middle Eastern hubs (2018–2024).
+                  </p>
+                  <div class="p-4 rounded-xl bg-[#072447] border border-cyan-400/30 space-y-2 font-mono text-xs">
+                    <div class="flex justify-between text-zinc-300">
+                      <span>ITC TradeMap:</span>
+                      <span class="text-zinc-100 font-medium">HS 0402.10/21</span>
+                    </div>
+                    <div class="flex justify-between text-zinc-300">
+                      <span>ITC MacMap:</span>
+                      <span class="text-zinc-100 font-medium">MFN & Tariffs</span>
+                    </div>
+                    <div class="flex justify-between text-zinc-300">
+                      <span>UN Comtrade:</span>
+                      <span class="text-zinc-100 font-medium">Gravity Modeling</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-[10px] font-mono text-cyan-300 pt-2 border-t border-cyan-500/20 font-medium">Multilateral Empirical Tools</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="p-6 md:p-8 border-t border-amber-400/20 bg-[#0c1c38]/80 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-300 reveal-card stagger-5">
+          <div class="flex items-center gap-3">
+            <i data-lucide="award" class="w-5 h-5 text-amber-300"></i>
+            <span class="text-zinc-100">Strategic Recommendation: Organic dairy diversification & cold-chain bonded warehousing joint-venture at Jebel Ali Port.</span>
+          </div>
+          <span class="text-amber-300 font-bold uppercase tracking-wider">Grade: 9.4 / 10 (Highest Honors)</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SECTION 05: ACADEMIC AWARDS & SKILLS ==================== -->
+    <section id="academic" class="space-y-12">
+      <!-- High-Contrast Executive Header Plaque -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0d345e]/90 via-[#0a2747]/85 to-[#071c33]/90 backdrop-blur-xl border border-cyan-300/40 shadow-[0_16px_40px_rgba(4,20,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-header">
+        <div>
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#072447] border-2 border-cyan-300 text-cyan-200 font-mono text-xs font-extrabold tracking-widest uppercase shadow-[0_0_20px_rgba(56,189,248,0.35)] mb-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-300 animate-pulse"></span>
+            05 / HONORS & QUANTITATIVE SKILLS
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            Research Honors & Capabilities
+          </h2>
+        </div>
+        <div class="px-4 py-2 rounded-full bg-[#072447] border border-cyan-300/50 text-cyan-200 font-mono font-bold text-xs shadow-md">
+          BANKING ACADEMY OF VIETNAM · 2025
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Card 1: BAV Research (3D Flip Card) -->
+        <div class="lg:col-span-7 flip-card-wrapper h-full reveal-card stagger-1" data-card-id="sec5-bav">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 rounded-3xl bg-gradient-to-br from-[#283e66]/90 via-[#1c2e4f]/85 to-[#12203d]/90 backdrop-blur-xl border border-amber-300/40 shadow-[0_16px_40px_rgba(12,25,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[380px]">
+              <div class="absolute inset-0 bg-radial-gradient from-amber-400/20 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-amber-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-amber-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-amber-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-amber-300/80"></div>
+
+              <div class="relative w-20 h-20 rounded-full border-2 border-amber-300/70 bg-amber-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(251,191,36,0.4)] group-hover:scale-110 group-hover:border-amber-200 transition-all duration-500">
+                <i data-lucide="award" class="w-8 h-8 text-amber-200 animate-pulse"></i>
+              </div>
+
+              <div class="mt-4 text-center space-y-1 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-[10px] font-mono tracking-widest text-amber-200 font-semibold uppercase">05-A · Scientific Research</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">BAV Scientific Conference</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">Second Prize Institution-Wide · Lead Author</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 rounded-3xl bg-gradient-to-br from-[#1e2f4f]/95 via-[#15233d]/95 to-[#0d172e]/95 backdrop-blur-2xl border border-amber-300/50 space-y-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-200 font-mono text-xs font-semibold">
+                    SECOND PRIZE & TEAM LEADER
+                  </span>
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs text-zinc-300 font-medium">2025</span>
+                    <span class="flip-hint-pill">Close ↺</span>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="font-display font-bold text-2xl text-white">
+                    Lead Author — BAV Scientific Research Conference
+                  </h3>
+                  <p class="font-sans font-medium text-amber-200 text-sm mt-1">
+                    Annual Student Scientific Research Conference, Banking Academy of Vietnam
+                  </p>
+                </div>
+
+                <p class="text-sm sm:text-base text-zinc-100 font-normal leading-relaxed mt-4">
+                  Directed a 4-member research team constructing empirical models to assess exchange rate volatility and cross-border settlement risks on export profit margins of Vietnamese agricultural enterprises.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 pt-2">
+                <div class="p-4 rounded-xl bg-[#0e1f3d] border border-cyan-400/30">
+                  <div class="font-mono text-[11px] text-cyan-200 font-medium uppercase">Role</div>
+                  <div class="font-bold text-sm text-white mt-1">Team Leader & Lead Author</div>
+                </div>
+                <div class="p-4 rounded-xl bg-[#0e1f3d] border border-amber-400/30">
+                  <div class="font-mono text-[11px] text-amber-200 font-medium uppercase">Distinction</div>
+                  <div class="font-bold text-sm text-amber-300 mt-1">Second Prize Institution-Wide</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Technical Tooling (3D Flip Card) -->
+        <div class="lg:col-span-5 flip-card-wrapper h-full reveal-card stagger-2" data-card-id="sec5-tooling">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 rounded-3xl bg-gradient-to-br from-[#124275]/90 via-[#0e335e]/85 to-[#082447]/90 backdrop-blur-xl border border-cyan-300/40 shadow-[0_16px_40px_rgba(4,20,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[380px]">
+              <div class="absolute inset-0 bg-radial-gradient from-cyan-400/20 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-300/80"></div>
+
+              <div class="relative w-20 h-20 rounded-full border-2 border-cyan-300/70 bg-cyan-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(56,189,248,0.4)] group-hover:scale-110 group-hover:border-cyan-200 transition-all duration-500">
+                <i data-lucide="cpu" class="w-8 h-8 text-cyan-200 animate-pulse"></i>
+              </div>
+
+              <div class="mt-4 text-center space-y-1 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-[10px] font-mono tracking-widest text-cyan-200 font-semibold uppercase">05-B · Quantitative Stack</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">Technical Capabilities</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">IELTS 7.5 · Incoterms 2020 · Trade Intelligence</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 rounded-3xl bg-gradient-to-br from-[#0e3666]/95 via-[#0a2a52]/95 to-[#071f3f]/95 backdrop-blur-2xl border border-cyan-300/50 space-y-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-mono text-xs text-cyan-200 font-bold uppercase tracking-wider block">Core Competencies</span>
+                  <span class="flip-hint-pill">Close ↺</span>
+                </div>
+                <h3 class="font-display font-bold text-xl text-white mb-6">Technical Tooling</h3>
+
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between font-mono text-xs mb-1.5">
+                      <span class="text-zinc-100">Academic English (IELTS 7.5)</span>
+                      <span class="text-emerald-300 font-semibold">L: 8.5 / R: 8.5</span>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+                      <div class="h-full bg-emerald-400 rounded-full" style="width: 88%"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between font-mono text-xs mb-1.5">
+                      <span class="text-zinc-100">Incoterms 2020 & Trade Contracts</span>
+                      <span class="text-cyan-300 font-semibold">9.5 / 10 Coursework</span>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+                      <div class="h-full bg-cyan-400 rounded-full" style="width: 95%"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between font-mono text-xs mb-1.5">
+                      <span class="text-zinc-100">Trade Finance (L/C, T/T, CAD, B/L)</span>
+                      <span class="text-amber-300 font-semibold">Proficient</span>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+                      <div class="h-full bg-amber-400 rounded-full" style="width: 90%"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between font-mono text-xs mb-1.5">
+                      <span class="text-zinc-100">Trade Intelligence (TradeMap, SQL, Excel)</span>
+                      <span class="text-indigo-300 font-semibold">Advanced</span>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+                      <div class="h-full bg-indigo-400 rounded-full" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#072447] border border-cyan-400/30 font-mono text-[11px] text-zinc-100 flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Certifications: IELTS Academic 7.5, MOS Excel, Incoterms Masterclass.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SECTION 06: CURATED LITERATURE ==================== -->
+    <section id="literature" class="space-y-12">
+      <!-- High-Contrast Executive Header Plaque -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#123163]/90 via-[#0d234a]/85 to-[#081836]/90 backdrop-blur-xl border border-indigo-300/40 shadow-[0_16px_40px_rgba(7,20,53,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-header">
+        <div>
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#0c2349] border-2 border-indigo-300 text-indigo-200 font-mono text-xs font-extrabold tracking-widest uppercase shadow-[0_0_20px_rgba(99,102,241,0.35)] mb-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-300 animate-pulse"></span>
+            06 / LITERARY REFLECTIONS & MINDSET
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            Curated Bookshelf
+          </h2>
+        </div>
+        <p class="text-xs font-mono text-indigo-200 max-w-md">
+          Two seminal books shaping resilience, intellectual humility, and an enduring commitment to empathy amidst complexity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Book 1: The Fault in Our Stars (3D Flip Card) -->
+        <div class="flip-card-wrapper h-full reveal-card stagger-1" data-card-id="sec6-book1">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#1a4080]/90 via-[#133066]/85 to-[#0d224d]/90 backdrop-blur-xl border border-indigo-300/40 shadow-[0_16px_40px_rgba(7,20,53,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[460px]">
+              <div class="absolute inset-0 bg-radial-gradient from-indigo-500/20 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-indigo-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-indigo-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-indigo-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-indigo-300/80"></div>
+
+              <div class="relative w-20 h-20 rounded-full border-2 border-indigo-300/70 bg-indigo-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(129,140,248,0.4)] group-hover:scale-110 group-hover:border-indigo-200 transition-all duration-500">
+                <i data-lucide="infinity" class="w-8 h-8 text-indigo-200 animate-pulse"></i>
+              </div>
+
+              <div class="mt-4 text-center space-y-1.5 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-[10px] font-mono tracking-widest text-indigo-200 font-semibold uppercase">06-A · Existential Philosophy</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">The Fault in Our Stars</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">John Green · Impermanence & Meaningful Presence</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#14346e]/95 via-[#0e2654]/95 to-[#091b3f]/95 backdrop-blur-2xl border border-indigo-300/50 space-y-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+              <div class="space-y-5">
+                <div class="flex items-center justify-between">
+                  <span class="px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-indigo-200 font-mono text-xs">
+                    JOHN GREEN · 2012
+                  </span>
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs text-zinc-300">Existential Philosophy</span>
+                    <span class="flip-hint-pill">Close ↺</span>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <h3 class="font-display font-bold text-2xl text-white group-hover:text-indigo-200 transition-colors">
+                    The Fault in Our Stars
+                  </h3>
+                  <p class="font-serif italic text-indigo-200 text-lg">
+                    On Impermanence & Meaningful Presence
+                  </p>
+                </div>
+
+                <blockquote class="p-5 rounded-2xl bg-[#0d234d]/85 backdrop-blur-md border-l-4 border-indigo-300 font-serif italic text-white text-base sm:text-lg leading-relaxed shadow-lg">
+                  "Some infinities are bigger than other infinities... You gave me a forever within the numbered days, and I'm grateful."
+                </blockquote>
+
+                <div class="space-y-3 pt-2">
+                  <h4 class="font-mono text-xs text-indigo-200 font-semibold uppercase tracking-wider">Minh Nguyet's Reflection:</h4>
+                  <p class="text-sm sm:text-base text-slate-100 font-sans leading-relaxed">
+                    Beyond an evocative narrative of Hazel and Augustus, this work is a profound meditation on human finitude. It reminds me that the value of any endeavor is not solely measured by chronological length, but by the depth of presence, empathy, and genuine dedication we bring to each engagement.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-borderSubtle flex items-center justify-between text-xs font-mono text-zinc-300">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="bookmark" class="w-3.5 h-3.5 text-indigo-300"></i>
+                  Core takeaway
+                </span>
+                <span class="text-indigo-200 font-medium">Empathy · Purposeful Presence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 2: When Breath Becomes Air (3D Flip Card) -->
+        <div class="flip-card-wrapper h-full reveal-card stagger-2" data-card-id="sec6-book2">
+          <div class="flip-card-inner">
+            <!-- Front Face (MẶT ĐẦU TIÊN: BÍ ẨN) -->
+            <div class="flip-card-front p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#124275]/90 via-[#0e335e]/85 to-[#082447]/90 backdrop-blur-xl border border-cyan-300/40 shadow-[0_16px_40px_rgba(4,20,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center relative overflow-hidden group min-h-[460px]">
+              <div class="absolute inset-0 bg-radial-gradient from-cyan-400/20 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-300/80"></div>
+              <div class="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-300/80"></div>
+
+              <div class="relative w-20 h-20 rounded-full border-2 border-cyan-300/70 bg-cyan-500/25 flex items-center justify-center shadow-[0_0_35px_rgba(56,189,248,0.4)] group-hover:scale-110 group-hover:border-cyan-200 transition-all duration-500">
+                <i data-lucide="feather" class="w-8 h-8 text-cyan-200 animate-pulse"></i>
+              </div>
+
+              <div class="mt-4 text-center space-y-1.5 z-10">
+                <span class="inline-block px-3 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-[10px] font-mono tracking-widest text-cyan-200 font-semibold uppercase">06-B · Moral Purpose</span>
+                <h4 class="text-xl font-display font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">When Breath Becomes Air</h4>
+                <p class="text-xs text-slate-200 font-sans font-medium">Paul Kalanithi · The Asymptote of Excellence</p>
+              </div>
+
+              <div class="absolute bottom-4 inset-x-0 flex items-center justify-center pointer-events-none">
+                <span class="flip-hint-pill">✦ Tap to Reveal ↺</span>
+              </div>
+            </div>
+
+            <!-- Back Face (RỒI LẬT MỚI HIỆN NỘI DUNG) -->
+            <div class="flip-card-back p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#0e3666]/95 via-[#0a2a52]/95 to-[#071f3f]/95 backdrop-blur-2xl border border-cyan-300/50 space-y-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+              <div class="space-y-5">
+                <div class="flex items-center justify-between">
+                  <span class="px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-200 font-mono text-xs">
+                    PAUL KALANITHI · 2016
+                  </span>
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs text-zinc-300">Memoir & Moral Purpose</span>
+                    <span class="flip-hint-pill">Close ↺</span>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <h3 class="font-display font-bold text-2xl text-white group-hover:text-cyan-200 transition-colors">
+                    When Breath Becomes Air
+                  </h3>
+                  <p class="font-serif italic text-cyan-200 text-lg">
+                    The Asymptote of Excellence & Humility
+                  </p>
+                </div>
+
+                <blockquote class="p-5 rounded-2xl bg-[#08284f]/85 backdrop-blur-md border-l-4 border-cyan-300 font-serif italic text-white text-base sm:text-lg leading-relaxed shadow-lg">
+                  "You can’t ever reach perfection, but you can believe in an asymptote toward which you are ceaselessly striving."
+                </blockquote>
+
+                <div class="space-y-3 pt-2">
+                  <h4 class="font-mono text-xs text-cyan-200 font-semibold uppercase tracking-wider">Minh Nguyet's Reflection:</h4>
+                  <p class="text-sm sm:text-base text-slate-100 font-sans leading-relaxed">
+                    Neurosurgeon Paul Kalanithi’s transition from physician to terminal patient shaped my intellectual discipline. The concept of the asymptote inspires me to ceaselessly pursue technical precision in trade economics, while grounding every analytical conclusion in humility, ethics, and human warmth.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-borderSubtle flex items-center justify-between text-xs font-mono text-zinc-300">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="bookmark" class="w-3.5 h-3.5 text-cyan-300"></i>
+                  Core takeaway
+                </span>
+                <span class="text-cyan-200 font-medium">The Asymptote · Rigor & Integrity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SECTION 07: CONTACT & FOOTER ==================== -->
+    <section id="contact" class="space-y-10 pt-8">
+      
+      <!-- Static Dossier Card (Không lật - Luminous Sapphire-Emerald Glass) -->
+      <div class="reveal-card stagger-1 p-8 md:p-14 rounded-3xl bg-gradient-to-br from-[#0d345e]/90 via-[#0a2647]/85 to-[#071c36]/90 backdrop-blur-xl border border-emerald-300/40 text-center space-y-8 relative overflow-hidden interactive-card shadow-[0_20px_50px_rgba(4,24,48,0.5),inset_0_1px_1px_rgba(255,255,255,0.22)]">
+        <!-- Internal subtle radial glow -->
+        <div class="absolute inset-0 bg-radial-gradient from-emerald-400/20 via-transparent to-transparent pointer-events-none"></div>
+
+        <!-- High-tech corner optical brackets in emerald -->
+        <div class="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-emerald-300/80 pointer-events-none"></div>
+        <div class="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-emerald-300/80 pointer-events-none"></div>
+        <div class="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-emerald-300/80 pointer-events-none"></div>
+        <div class="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-emerald-300/80 pointer-events-none"></div>
+
+        <div class="max-w-2xl mx-auto space-y-4 relative z-10">
+          <div class="flex items-center justify-center gap-3">
+            <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#082a3c] border-2 border-emerald-300 text-xs font-mono text-emerald-200 font-extrabold tracking-widest uppercase shadow-[0_0_20px_rgba(52,211,153,0.35)]">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-pulse"></span>
+              07 / PROFESSIONAL INQUIRIES & COLLABORATION
+            </span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-display font-black tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            Building Value <br>
+            <span class="font-serif italic font-normal text-cyan-200 drop-shadow">across global trade frontiers.</span>
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-100 font-medium leading-relaxed max-w-xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            Open for conversations in customs compliance, trade finance advisory, academic research, or thoughtful discussions on literature and music.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 max-w-xl mx-auto relative z-10">
+          <button onclick="copyToClipboard('minhnguyetng.ftu@gmail.com', 'Copied Email: minhnguyetng.ftu@gmail.com!')" class="flex items-center gap-3.5 px-7 py-4 rounded-2xl bg-[#0c2f57]/90 hover:bg-[#103a6b] border-2 border-cyan-300 hover:border-cyan-200 text-left transition-all group interactive-card shadow-[0_10px_25px_rgba(4,20,40,0.4)]">
+            <div class="p-2.5 rounded-xl bg-cyan-500/25 text-cyan-200 group-hover:text-white group-hover:bg-cyan-500/50 transition-all border border-cyan-400/40">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-cyan-200 font-bold uppercase tracking-wider">Direct Email</div>
+              <div class="text-sm font-mono text-white font-black tracking-tight">minhnguyetng.ftu@gmail.com</div>
+            </div>
+          </button>
+
+          <button onclick="copyToClipboard('0365935926', 'Copied Phone: (+84) 365 935 926!')" class="flex items-center gap-3.5 px-7 py-4 rounded-2xl bg-[#09354a]/90 hover:bg-[#0d425c] border-2 border-emerald-300 hover:border-emerald-200 text-left transition-all group interactive-card shadow-[0_10px_25px_rgba(4,20,40,0.4)]">
+            <div class="p-2.5 rounded-xl bg-emerald-500/25 text-emerald-200 group-hover:text-white group-hover:bg-emerald-500/50 transition-all border border-emerald-400/40">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-emerald-200 font-bold uppercase tracking-wider">Phone / Zalo</div>
+              <div class="text-sm font-mono text-white font-black tracking-tight">(+84) 365 935 926</div>
+            </div>
+          </button>
+        </div>
+
+        <div class="pt-2 text-xs font-mono text-slate-200 font-medium flex items-center justify-center gap-2 relative z-10 drop-shadow">
+          <i data-lucide="map-pin" class="w-4 h-4 text-cyan-300"></i>
+          <span>Hanoi, Vietnam (UTC+07:00) · Foreign Trade University & Deloitte GTA</span>
+        </div>
+      </div>
+
+      <!-- Persistent Footer Bar -->
+      <div class="pt-6 border-t border-borderSubtle flex flex-wrap items-center justify-between text-xs font-mono text-zinc-300 max-w-4xl mx-auto">
+        <div>© 2026 NGUYEN THI MINH NGUYET · D.O.B: 10/12/2006 · HANOI, VIETNAM</div>
+        <div class="flex items-center gap-4 mt-2 sm:mt-0">
+          <a href="#hero" class="hover:text-cyan-300 text-zinc-200 transition-colors flex items-center gap-1 font-medium">
+            <span>Back to Top</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== FLOATING BACKGROUND MUSIC CONTROLLER ==================== -->
+  <div id="bgm-widget" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 p-2.5 sm:px-4 sm:py-2.5 rounded-full bg-zinc-900/90 hover:bg-zinc-900 border border-zinc-700/80 shadow-[0_10px_35px_rgba(0,0,0,0.7)] backdrop-blur-md transition-all duration-300 group gpu-accel">
+    
+    <!-- Mini spinning record -->
+    <div class="relative w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center overflow-hidden flex-shrink-0 cursor-pointer" onclick="toggleBgm()">
+      <div id="bgm-vinyl" class="w-full h-full rounded-full vinyl-grooves flex items-center justify-center transition-transform duration-700">
+        <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+      </div>
+    </div>
+
+    <!-- Song metadata & YouTube official link -->
+    <div class="flex flex-col text-left pr-1 cursor-pointer" onclick="toggleBgm()">
+      <div class="flex items-center gap-1.5">
+        <span class="font-display font-bold text-xs text-white tracking-tight">Saturn</span>
+        <a href="https://www.youtube.com/watch?v=V2G8ESoDXm8" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="Listen officially on YouTube" class="text-[9px] font-mono text-zinc-400 hover:text-emerald-400 flex items-center gap-0.5 border border-zinc-700 hover:border-emerald-500/60 px-1.5 py-0.5 rounded-full bg-zinc-800 transition-colors">
+          <span>YouTube</span>
+          <i data-lucide="external-link" class="w-2.5 h-2.5"></i>
+        </a>
+      </div>
+      <div class="flex items-center gap-1 font-mono text-[10px] text-zinc-400">
+        <span>SZA</span>
+        <span>•</span>
+        <span id="bgm-status-text" class="text-zinc-500">Paused</span>
+      </div>
+    </div>
+
+    <!-- Play / Pause Button -->
+    <button id="bgm-toggle-btn" onclick="toggleBgm()" class="p-2.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-zinc-950 font-bold transition-all shadow-[0_0_15px_rgba(16,185,129,0.35)] flex-shrink-0" title="Play / Pause Background Music">
+      <i id="bgm-play-icon" data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+    </button>
+
+    <!-- Volume Controls -->
+    <div class="hidden sm:flex items-center gap-1.5 pl-1 border-l border-zinc-800">
+      <button onclick="toggleBgmMute()" class="text-zinc-400 hover:text-white p-1">
+        <i id="bgm-volume-icon" data-lucide="volume-2" class="w-3.5 h-3.5 text-emerald-400"></i>
+      </button>
+      <input 
+        type="range" 
+        id="bgm-volume-slider" 
+        min="0" 
+        max="1" 
+        step="0.05" 
+        value="0.75" 
+        oninput="adjustBgmVolume(this.value)"
+        class="w-16 h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+        title="Adjust Background Music Volume"
+      />
+    </div>
+
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    lucide.createIcons();
+
+    // High performance Lenis smooth scroll
+    const lenis = new Lenis({
+      duration: 1.0,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
+      orientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.1,
+      touchMultiplier: 1.5,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // ==================== SCROLL REVEAL OBSERVER ====================
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.reveal-card, .reveal-item, .reveal-header').forEach(el => revealObserver.observe(el));
+
+    // ==================== INTERACTIVE ANIMATED CURSOR ====================
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorRing = document.getElementById('cursor-ring');
+    const cursorAura = document.getElementById('cursor-aura');
+
+    let mouseX = -200, mouseY = -200;
+    let ringX = -200, ringY = -200;
+    let auraX = -200, auraY = -200;
+    let isCursorInit = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isCursorInit) {
+        isCursorInit = true;
+        ringX = mouseX;
+        ringY = mouseY;
+        auraX = mouseX;
+        auraY = mouseY;
+        if (cursorDot) cursorDot.style.opacity = '1';
+        if (cursorRing) cursorRing.style.opacity = '1';
+        if (cursorAura) cursorAura.style.opacity = '1';
+      }
+
+      if (cursorDot) {
+        cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+      }
+    });
+
+    document.addEventListener('mouseleave', () => {
+      if (cursorDot) cursorDot.style.opacity = '0';
+      if (cursorRing) cursorRing.style.opacity = '0';
+      if (cursorAura) cursorAura.style.opacity = '0';
+      isCursorInit = false;
+    });
+
+    document.addEventListener('mouseenter', () => {
+      if (cursorDot) cursorDot.style.opacity = '1';
+      if (cursorRing) cursorRing.style.opacity = '1';
+      if (cursorAura) cursorAura.style.opacity = '1';
+      isCursorInit = true;
+    });
+
+    // Tactile Click Shockwave Ripple
+    window.addEventListener('mousedown', (e) => {
+      document.body.classList.add('cursor-active');
+
+      const ripple = document.createElement('div');
+      ripple.className = 'cursor-click-ripple';
+      ripple.style.left = `${e.clientX}px`;
+      ripple.style.top = `${e.clientY}px`;
+      document.body.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 550);
+    });
+
+    window.addEventListener('mouseup', () => {
+      document.body.classList.remove('cursor-active');
+    });
+
+    // Interactive Hover Binding
+    function bindCursorHovers() {
+      const hoverables = document.querySelectorAll('a, button, input, [role="button"], select, textarea, .interactive-card');
+      hoverables.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+    }
+    bindCursorHovers();
+
+    // Smooth RAF loop for physics trailing
+    function renderCursor() {
+      if (isCursorInit) {
+        ringX += (mouseX - ringX) * 0.22;
+        ringY += (mouseY - ringY) * 0.22;
+        if (cursorRing) {
+          cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+        }
+
+        auraX += (mouseX - auraX) * 0.08;
+        auraY += (mouseY - auraY) * 0.08;
+        if (cursorAura) {
+          cursorAura.style.transform = `translate3d(${auraX}px, ${auraY}px, 0) translate(-50%, -50%)`;
+        }
+      }
+      requestAnimationFrame(renderCursor);
+    }
+    requestAnimationFrame(renderCursor);
+
+    // ==================== CLIPBOARD HELPER ====================
+    function copyToClipboard(text, customMessage) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(customMessage || 'Copied to clipboard!');
+      }).catch(() => {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast(customMessage || 'Copied to clipboard!');
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // ==================== BACKGROUND MUSIC CONTROLLER ====================
+    const bgAudio = document.getElementById('bg-audio');
+    const bgmPlayIcon = document.getElementById('bgm-play-icon');
+    const bgmVinyl = document.getElementById('bgm-vinyl');
+    const bgmStatusText = document.getElementById('bgm-status-text');
+    const bgmVolumeSlider = document.getElementById('bgm-volume-slider');
+    const bgmVolumeIcon = document.getElementById('bgm-volume-icon');
+    const headerBgmDot = document.getElementById('header-bgm-dot');
+    const headerBgmText = document.getElementById('header-bgm-text');
+
+    bgAudio.volume = 0.75;
+
+    function toggleBgm() {
+      if (bgAudio.paused) {
+        bgAudio.play().then(() => {
+          bgmPlayIcon.setAttribute('data-lucide', 'pause');
+          bgmVinyl.classList.add('spin-active');
+          bgmStatusText.innerText = 'Playing';
+          bgmStatusText.classList.remove('text-zinc-500');
+          bgmStatusText.classList.add('text-emerald-400');
+          if (headerBgmDot) headerBgmDot.style.display = 'inline-block';
+          if (headerBgmText) headerBgmText.innerText = 'Playing: Saturn (SZA)';
+          lucide.createIcons();
+          showToast('🪐 Playing: Saturn — SZA');
+          if (typeof unlockBgmBadge === 'function') unlockBgmBadge();
+        }).catch(err => {
+          console.error("Audio playback error:", err);
+          showToast('Click to enable background audio');
+        });
+      } else {
+        bgAudio.pause();
+        bgmPlayIcon.setAttribute('data-lucide', 'play');
+        bgmVinyl.classList.remove('spin-active');
+        bgmStatusText.innerText = 'Paused';
+        bgmStatusText.classList.remove('text-emerald-400');
+        bgmStatusText.classList.add('text-zinc-500');
+        if (headerBgmDot) headerBgmDot.style.display = 'none';
+        if (headerBgmText) headerBgmText.innerText = 'BGM: Saturn (SZA)';
+        lucide.createIcons();
+      }
+    }
+
+    function adjustBgmVolume(val) {
+      bgAudio.volume = parseFloat(val);
+      if (val == 0) {
+        bgmVolumeIcon.setAttribute('data-lucide', 'volume-x');
+      } else {
+        bgmVolumeIcon.setAttribute('data-lucide', 'volume-2');
+      }
+      lucide.createIcons();
+    }
+
+    function toggleBgmMute() {
+      if (bgAudio.volume > 0) {
+        bgAudio.dataset.prevVol = bgAudio.volume;
+        adjustBgmVolume(0);
+        bgmVolumeSlider.value = 0;
+      } else {
+        const prev = bgAudio.dataset.prevVol || 0.75;
+        adjustBgmVolume(prev);
+        bgmVolumeSlider.value = prev;
+      }
+    }
+
+    // ==================== CELESTIAL NIGHT STARS & GLITTER BAY BAY ENGINE ====================
+    (function initCelestialEngine() {
+      const canvas = document.getElementById('glitter-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let width = 0;
+      let height = 0;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.scale(dpr, dpr);
+        initElements();
+      }
+      window.addEventListener('resize', resize);
+
+      const celestialColors = [
+        'rgba(255, 255, 255, ',   // Pure Diamond White
+        'rgba(186, 230, 253, ',   // Ice Sky Blue
+        'rgba(56, 189, 248, ',    // Electric Cyan
+        'rgba(224, 242, 254, ',   // Pale Crystal Blue
+        'rgba(253, 224, 71, ',    // Warm Celestial Gold
+        'rgba(238, 242, 255, '    // Silver Starlight
+      ];
+
+      // ----------------- CLASS 1: NIGHT SKY FIXED STARS (Ngôi sao bầu trời đêm) -----------------
+      class NightStar {
+        constructor() {
+          this.reset();
+        }
+
+        reset() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.size = Math.random() * 2.8 + 1.2;
+          const typeRand = Math.random();
+          if (typeRand > 0.6) this.type = 'burst';      // 8-point nova burst
+          else if (typeRand > 0.25) this.type = 'diamond'; // 4-point diamond star
+          else this.type = 'flare';                    // Cross flare star
+          
+          this.twinklePhase = Math.random() * Math.PI * 2;
+          this.twinkleSpeed = Math.random() * 0.035 + 0.012;
+          this.baseAlpha = Math.random() * 0.4 + 0.45; // High visibility
+          this.color = celestialColors[Math.floor(Math.random() * celestialColors.length)];
+          this.rot = (Math.PI / 4) * Math.floor(Math.random() * 4);
+        }
+
+        update() {
+          this.twinklePhase += this.twinkleSpeed;
+        }
+
+        draw() {
+          const alpha = Math.max(0.15, Math.min(1.0, this.baseAlpha + Math.sin(this.twinklePhase) * 0.45));
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate(this.rot);
+
+          if (this.type === 'burst') {
+            // 8-point Nova Burst Star
+            const outerR = this.size * 3.5;
+            const innerR = this.size * 0.5;
+            ctx.beginPath();
+            for (let i = 0; i < 8; i++) {
+              const r = (i % 2 === 0) ? outerR : innerR;
+              const angle = (i * Math.PI) / 4;
+              const px = Math.cos(angle) * r;
+              const py = Math.sin(angle) * r;
+              if (i === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.fillStyle = this.color + alpha + ')';
+            ctx.shadowColor = 'rgba(56, 189, 248, ' + (alpha * 0.9) + ')';
+            ctx.shadowBlur = outerR * 2.2;
+            ctx.fill();
+
+            // Bright starlight core
+            ctx.beginPath();
+            ctx.arc(0, 0, this.size * 0.7, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, ' + alpha + ')';
+            ctx.fill();
+
+          } else if (this.type === 'diamond') {
+            // 4-point Classical Diamond Star
+            const outerR = this.size * 3.2;
+            const innerR = this.size * 0.6;
+            ctx.beginPath();
+            for (let i = 0; i < 4; i++) {
+              const angle = (i * Math.PI) / 2;
+              const px = Math.cos(angle) * outerR;
+              const py = Math.sin(angle) * outerR;
+              if (i === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+
+              const inAngle = angle + Math.PI / 4;
+              ctx.lineTo(Math.cos(inAngle) * innerR, Math.sin(inAngle) * innerR);
+            }
+            ctx.closePath();
+            ctx.fillStyle = this.color + alpha + ')';
+            ctx.shadowColor = 'rgba(125, 211, 252, ' + (alpha * 0.85) + ')';
+            ctx.shadowBlur = outerR * 1.8;
+            ctx.fill();
+
+          } else {
+            // Cross flare star with horizontal/vertical needle beams
+            const len = this.size * 4.2;
+            const wid = this.size * 0.8;
+            ctx.fillStyle = this.color + alpha + ')';
+            ctx.shadowColor = 'rgba(255, 255, 255, ' + (alpha * 0.95) + ')';
+            ctx.shadowBlur = len * 1.5;
+
+            // Horizontal ray
+            ctx.beginPath();
+            ctx.ellipse(0, 0, len, wid, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Vertical ray
+            ctx.beginPath();
+            ctx.ellipse(0, 0, wid, len, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Radiant center
+            ctx.beginPath();
+            ctx.arc(0, 0, this.size * 0.8, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, ' + alpha + ')';
+            ctx.fill();
+          }
+
+          ctx.restore();
+        }
+      }
+
+      // ----------------- CLASS 2: GLITTER BAY BAY (Hạt kim tuyến trôi bồng bềnh) -----------------
+      class GlitterBayBay {
+        constructor() {
+          this.reset(true);
+        }
+
+        reset(isInitial = false) {
+          this.x = Math.random() * width;
+          this.y = isInitial ? Math.random() * height : height + 10 + Math.random() * 30;
+          this.size = Math.random() * 2.6 + 1.2;
+          this.isDiamond = Math.random() > 0.4;
+          this.vy = -(Math.random() * 0.48 + 0.25); // Continuous upward drift
+          this.vx = (Math.random() - 0.5) * 0.25;
+          this.swayFreq = Math.random() * 0.02 + 0.008;
+          this.swayAmp = Math.random() * 0.9 + 0.4;
+          this.phase = Math.random() * Math.PI * 2;
+          this.twinkleSpeed = Math.random() * 0.04 + 0.018;
+          this.twinklePhase = Math.random() * Math.PI * 2;
+          this.baseAlpha = Math.random() * 0.45 + 0.45; // Vibrant & noticeable
+          this.rot = Math.random() * Math.PI;
+          this.rotSpeed = (Math.random() - 0.5) * 0.025;
+          this.color = celestialColors[Math.floor(Math.random() * celestialColors.length)];
+        }
+
+        update(time) {
+          this.y += this.vy;
+          this.x += this.vx + Math.sin(time * this.swayFreq + this.phase) * (this.swayAmp * 0.45);
+          this.twinklePhase += this.twinkleSpeed;
+          this.rot += this.rotSpeed;
+
+          // Interactive mouse agitation & luminescent flare
+          if (typeof isCursorInit !== 'undefined' && isCursorInit) {
+            const dx = this.x - mouseX;
+            const dy = this.y - mouseY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 105) {
+              const force = (105 - dist) / 105;
+              this.x += (dx / dist) * force * 1.8;
+              this.y += (dy / dist) * force * 1.8;
+              this.baseAlpha = Math.min(1.0, this.baseAlpha + force * 0.1);
+            }
+          }
+
+          if (this.y < -35 || this.x < -35 || this.x > width + 35) {
+            this.reset(false);
+          }
+        }
+
+        draw() {
+          const alpha = Math.max(0.12, Math.min(1.0, this.baseAlpha + Math.sin(this.twinklePhase) * 0.38));
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate(this.rot);
+
+          if (this.isDiamond) {
+            // Rotating diamond sparkle starlet
+            const outerR = this.size * 2.8;
+            const innerR = this.size * 0.65;
+            ctx.beginPath();
+            for (let i = 0; i < 4; i++) {
+              const angle = (i * Math.PI) / 2;
+              ctx.lineTo(Math.cos(angle) * outerR, Math.sin(angle) * outerR);
+              const inAngle = angle + Math.PI / 4;
+              ctx.lineTo(Math.cos(inAngle) * innerR, Math.sin(inAngle) * innerR);
+            }
+            ctx.closePath();
+            ctx.fillStyle = this.color + alpha + ')';
+            ctx.shadowColor = 'rgba(56, 189, 248, ' + (alpha * 0.9) + ')';
+            ctx.shadowBlur = outerR * 1.6;
+            ctx.fill();
+          } else {
+            // Shimmering stardust sphere
+            ctx.beginPath();
+            ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color + alpha + ')';
+            ctx.shadowColor = 'rgba(125, 211, 252, ' + (alpha * 0.9) + ')';
+            ctx.shadowBlur = this.size * 3.8;
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+      }
+
+      let stars = [];
+      let glitters = [];
+
+      function initElements() {
+        stars = [];
+        glitters = [];
+        const starCount = Math.min(120, Math.max(70, Math.floor((width * height) / 12000)));
+        const glitterCount = Math.min(200, Math.max(120, Math.floor((width * height) / 7000)));
+
+        for (let i = 0; i < starCount; i++) {
+          stars.push(new NightStar());
+        }
+        for (let i = 0; i < glitterCount; i++) {
+          glitters.push(new GlitterBayBay());
+        }
+      }
+
+      resize();
+
+      let time = 0;
+      function renderLoop() {
+        time++;
+        ctx.clearRect(0, 0, width, height);
+
+        // Draw twinkling night sky stars
+        for (let i = 0; i < stars.length; i++) {
+          stars[i].update();
+          stars[i].draw();
+        }
+
+        // Draw floating glitter bay bay
+        for (let i = 0; i < glitters.length; i++) {
+          glitters[i].update(time);
+          glitters[i].draw();
+        }
+
+        requestAnimationFrame(renderLoop);
+      }
+      requestAnimationFrame(renderLoop);
+    })();
+
+    // ==================== EXECUTIVE DOSSIER GAMIFICATION ENGINE ====================
+    const questState = {
+      unlockedCards: new Set(),
+      totalCards: 20,
+      sfxEnabled: true,
+      isAllDecrypted: false,
+      fireworksCelebrated: false,
+      badges: {
+        academic: false,
+        deloitte: false,
+        community: false,
+        vinamilk: false,
+        research: false,
+        literature: false,
+        music: false,
+        grandmaster: false
+      }
+    };
+
+    // --- Web Audio Synthesizer (Zero asset loading required) ---
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) {
+          audioCtx = new AudioCtx();
+        }
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playTone(freq, duration, type = 'sine', gainVal = 0.12, delay = 0) {
+      if (!questState.sfxEnabled) return;
+      setTimeout(() => {
+        try {
+          const ctx = getAudioContext();
+          if (!ctx) return;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          
+          gain.gain.setValueAtTime(gainVal, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
+          
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          
+          osc.start();
+          osc.stop(ctx.currentTime + duration);
+        } catch (e) {
+          // Audio safe catch
+        }
+      }, delay);
+    }
+
+    function playCardFlipSfx() {
+      playTone(523.25, 0.10, 'sine', 0.10, 0);   // C5
+      playTone(659.25, 0.16, 'sine', 0.12, 50);  // E5
+    }
+
+    function playLevelUpSfx() {
+      playTone(523.25, 0.14, 'triangle', 0.14, 0);    // C5
+      playTone(659.25, 0.14, 'triangle', 0.14, 80);   // E5
+      playTone(783.99, 0.18, 'triangle', 0.15, 160);  // G5
+      playTone(1046.50, 0.40, 'sine', 0.20, 240);     // C6
+    }
+
+    function playBadgeSfx() {
+      playTone(587.33, 0.18, 'sine', 0.14, 0);    // D5
+      playTone(739.99, 0.18, 'sine', 0.14, 80);   // F#5
+      playTone(880.00, 0.18, 'sine', 0.15, 160);  // A5
+      playTone(1174.66, 0.45, 'triangle', 0.22, 240); // D6
+    }
+
+    function playGrandCelebrationFanfare() {
+      // Ascending triumphant fanfare chord: C4, E4, G4, C5, E5, G5, C6
+      const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50];
+      notes.forEach((freq, idx) => {
+        playTone(freq, 0.40, 'triangle', 0.16, idx * 80);
+        playTone(freq * 1.5, 0.25, 'sine', 0.08, idx * 80 + 30);
+      });
+      setTimeout(() => {
+        [523.25, 659.25, 783.99, 1046.50].forEach(f => {
+          playTone(f, 1.4, 'sine', 0.14, 0);
+          playTone(f * 2, 0.8, 'triangle', 0.08, 50);
+        });
+      }, 650);
+    }
+
+    function toggleSfx() {
+      questState.sfxEnabled = !questState.sfxEnabled;
+      const icon = document.getElementById('hud-sfx-icon');
+      const btn = document.getElementById('hud-sfx-btn');
+
+      if (questState.sfxEnabled) {
+        if (icon) icon.setAttribute('data-lucide', 'volume-2');
+        if (btn) {
+          btn.classList.remove('opacity-40', 'text-zinc-500');
+          btn.classList.add('text-cyan-400');
+        }
+        showToast('🔊 Sound FX Enabled');
+        playTone(659.25, 0.15, 'sine', 0.15, 0);
+      } else {
+        if (icon) icon.setAttribute('data-lucide', 'volume-x');
+        if (btn) {
+          btn.classList.add('opacity-40', 'text-zinc-500');
+          btn.classList.remove('text-cyan-400');
+        }
+        showToast('🔇 Sound FX Muted');
+      }
+      lucide.createIcons();
+    }
+
+    // --- Floating XP Counter Pill Animation ---
+    function spawnXpFloatingPill(wrapper) {
+      try {
+        const rect = wrapper.getBoundingClientRect();
+        const pill = document.createElement('div');
+        pill.className = 'xp-floating-pill';
+        pill.innerHTML = '<span>+100 XP</span><span class="text-cyan-300">✦</span>';
+        
+        const scrollX = window.scrollX || window.pageXOffset;
+        const scrollY = window.scrollY || window.pageYOffset;
+        
+        pill.style.left = (rect.left + scrollX + rect.width / 2) + 'px';
+        pill.style.top = (rect.top + scrollY + rect.height * 0.35) + 'px';
+        document.body.appendChild(pill);
+
+        setTimeout(() => {
+          if (pill.parentNode) pill.parentNode.removeChild(pill);
+        }, 1250);
+      } catch (e) {
+        // Safe catch
+      }
+    }
+
+    // --- Unlock Card Handler ---
+    function unlockCard(wrapper) {
+      const cardId = wrapper.getAttribute('data-card-id');
+      if (!cardId) return;
+
+      const isFirstUnlock = !questState.unlockedCards.has(cardId);
+      if (isFirstUnlock) {
+        questState.unlockedCards.add(cardId);
+        wrapper.classList.add('card-just-unlocked');
+
+        spawnXpFloatingPill(wrapper);
+
+        if (questState.sfxEnabled) {
+          playCardFlipSfx();
+        }
+
+        updateHud();
+        checkBadges();
+      }
+    }
+
+    // --- HUD Progress, XP & Rank Evaluator ---
+    function updateHud() {
+      const count = questState.unlockedCards.size;
+      const xp = count * 100;
+      const pct = Math.round((count / questState.totalCards) * 100);
+
+      const xpCounter = document.getElementById('hud-xp-counter');
+      if (xpCounter) xpCounter.innerText = xp;
+
+      const progressFill = document.getElementById('hud-progress-fill');
+      if (progressFill) progressFill.style.width = pct + '%';
+
+      const progressText = document.getElementById('hud-progress-text');
+      if (progressText) progressText.innerText = `${count} / ${questState.totalCards}`;
+
+      const rankName = document.getElementById('hud-rank-name');
+      const rankIcon = document.getElementById('hud-rank-icon');
+
+      let currentRank = 'LVL 1: NOVICE OBSERVER';
+      let iconName = 'compass';
+
+      if (count >= 20) {
+        currentRank = 'LVL 5: MASTER OF COMMERCE 100%';
+        iconName = 'crown';
+      } else if (count >= 15) {
+        currentRank = 'LVL 4: TRADE STRATEGIST';
+        iconName = 'zap';
+      } else if (count >= 9) {
+        currentRank = 'LVL 3: SENIOR AUDITOR';
+        iconName = 'shield-check';
+      } else if (count >= 4) {
+        currentRank = 'LVL 2: JUNIOR ANALYST';
+        iconName = 'search';
+      }
+
+      if (rankName && rankName.innerText !== currentRank) {
+        const prevRank = rankName.innerText;
+        rankName.innerText = currentRank;
+        if (rankIcon) rankIcon.setAttribute('data-lucide', iconName);
+        lucide.createIcons();
+
+        if (prevRank && prevRank !== currentRank && count > 0) {
+          if (questState.sfxEnabled) playLevelUpSfx();
+          showToast(`⚡ PROMOTED: ${currentRank}!`);
+        }
+      }
+    }
+
+    // --- Milestone Badge Checker ---
+    function checkBadges() {
+      const cards = questState.unlockedCards;
+
+      // Badge 1: Academic Scholar (Section 01)
+      if (!questState.badges.academic && cards.has('sec1-academic') && cards.has('sec1-customs') && cards.has('sec1-tradefinance')) {
+        triggerUnlockBadge('academic', 'badge-academic', 'Academic Scholar');
+      }
+
+      // Badge 2: Deloitte Insider (Section 02 - all 7 cards)
+      if (!questState.badges.deloitte && 
+          cards.has('sec2-deloitte-overview') && 
+          cards.has('sec2-duty1') && cards.has('sec2-duty2') && 
+          cards.has('sec2-duty3') && cards.has('sec2-duty4') && 
+          cards.has('sec2-duty5') && cards.has('sec2-duty6')) {
+        triggerUnlockBadge('deloitte', 'badge-deloitte', 'Deloitte GTA Insider');
+      }
+
+      // Badge 3: Community Catalyst (Section 03)
+      if (!questState.badges.community && cards.has('sec3-board') && cards.has('sec3-prom') && cards.has('sec3-camping')) {
+        triggerUnlockBadge('community', 'badge-community', 'Community Catalyst');
+      }
+
+      // Badge 4: Silk Road Strategist (Section 04)
+      if (!questState.badges.vinamilk && cards.has('sec4-tariff') && cards.has('sec4-halal') && cards.has('sec4-tools')) {
+        triggerUnlockBadge('vinamilk', 'badge-vinamilk', 'Silk Road Strategist');
+      }
+
+      // Badge 5: Empirical Researcher (Section 05)
+      if (!questState.badges.research && cards.has('sec5-bav') && cards.has('sec5-tooling')) {
+        triggerUnlockBadge('research', 'badge-research', 'Empirical Researcher');
+      }
+
+      // Badge 6: Starlit Philosopher (Section 06)
+      if (!questState.badges.literature && cards.has('sec6-book1') && cards.has('sec6-book2')) {
+        triggerUnlockBadge('literature', 'badge-literature', 'Starlit Philosopher');
+      }
+
+      // Badge 8: Grand Master Strategist (All 20 cards)
+      if (!questState.badges.grandmaster && cards.size >= questState.totalCards) {
+        triggerUnlockBadge('grandmaster', 'badge-grandmaster', 'Grand Master Strategist');
+      }
+    }
+
+    function triggerUnlockBadge(badgeKey, elementId, badgeTitle) {
+      if (questState.badges[badgeKey]) return;
+      questState.badges[badgeKey] = true;
+
+      const badgeEl = document.getElementById(elementId);
+      if (badgeEl) {
+        badgeEl.classList.remove('opacity-50', 'grayscale');
+        badgeEl.classList.add('badge-unlocked');
+        badgeEl.style.borderColor = '#fbbf24';
+        badgeEl.style.backgroundColor = 'rgba(251, 191, 36, 0.08)';
+
+        const iconBox = badgeEl.querySelector('.badge-icon');
+        if (iconBox) {
+          iconBox.classList.remove('bg-zinc-800', 'text-zinc-400');
+          iconBox.classList.add('bg-amber-500/20', 'text-amber-300');
+          iconBox.style.border = '1px solid rgba(251, 191, 36, 0.5)';
+        }
+
+        const title = badgeEl.querySelector('.badge-title');
+        if (title) {
+          title.classList.add('text-amber-300');
+        }
+
+        const statusText = badgeEl.querySelector('.status-text');
+        if (statusText) {
+          statusText.innerText = 'UNLOCKED ✨';
+          statusText.classList.remove('text-zinc-500');
+          statusText.classList.add('text-amber-400', 'font-bold');
+        }
+      }
+
+      updateBadgeCountDisplay();
+
+      if (questState.sfxEnabled) {
+        playBadgeSfx();
+      }
+      showToast(`🏆 Milestone Unlocked: ${badgeTitle}!`);
+    }
+
+    function updateBadgeCountDisplay() {
+      const unlockedCount = Object.values(questState.badges).filter(Boolean).length;
+      const hudBadgeCount = document.getElementById('hud-badge-count');
+      if (hudBadgeCount) {
+        hudBadgeCount.innerText = `${unlockedCount}/8`;
+        if (unlockedCount === 8) {
+          hudBadgeCount.classList.remove('bg-amber-400', 'text-zinc-950');
+          hudBadgeCount.classList.add('bg-gradient-to-r', 'from-amber-300', 'via-emerald-300', 'to-cyan-300', 'text-zinc-950', 'font-black', 'animate-pulse');
+        }
+      }
+
+      const modalUnlockedCount = document.getElementById('modal-unlocked-count');
+      if (modalUnlockedCount) modalUnlockedCount.innerText = unlockedCount;
+
+      // When ALL 8 Badges are Unlocked -> Launch Dual-Side Fireworks Celebration!
+      if (unlockedCount === 8) {
+        const banner = document.getElementById('modal-celebration-banner');
+        if (banner) banner.classList.remove('hidden');
+
+        if (!questState.fireworksCelebrated) {
+          questState.fireworksCelebrated = true;
+          setTimeout(() => {
+            launchDualSideFireworks();
+          }, 350);
+        }
+      }
+    }
+
+    // ==========================================
+    // GRAND CELEBRATION DUAL-SIDE FIREWORKS
+    // ==========================================
+    let fireworksInterval = null;
+
+    function launchDualSideFireworks() {
+      // 1. Play Grand Celebration Audio Fanfare
+      if (questState.sfxEnabled) {
+        playGrandCelebrationFanfare();
+      }
+
+      // 2. Show Celebration Toast
+      showToast('🎆 CHÚC MỪNG! ĐÃ MỞ KHÓA TOÀN BỘ 8/8 HUY HIỆU DANH DỰ! 🏆');
+
+      // 3. Reveal Celebration Banner in Modal
+      const banner = document.getElementById('modal-celebration-banner');
+      if (banner) banner.classList.remove('hidden');
+
+      // 4. Confetti / Fireworks Cannon from Both Sides (Left & Right)
+      const duration = 7 * 1000;
+      const animationEnd = Date.now() + duration;
+
+      if (typeof confetti === 'function') {
+        if (fireworksInterval) clearInterval(fireworksInterval);
+
+        // Immediate dramatic double-burst from left and right corners
+        confetti({
+          particleCount: 85,
+          angle: 60,
+          spread: 80,
+          startVelocity: 75,
+          origin: { x: 0, y: 0.85 },
+          colors: ['#38bdf8', '#34d399', '#facc15', '#a855f7', '#f43f5e', '#ffffff'],
+          shapes: ['circle', 'square', 'star'],
+          ticks: 250,
+          scalar: 1.3,
+          zIndex: 999999
+        });
+        confetti({
+          particleCount: 85,
+          angle: 120,
+          spread: 80,
+          startVelocity: 75,
+          origin: { x: 1, y: 0.85 },
+          colors: ['#38bdf8', '#34d399', '#facc15', '#a855f7', '#f43f5e', '#ffffff'],
+          shapes: ['circle', 'square', 'star'],
+          ticks: 250,
+          scalar: 1.3,
+          zIndex: 999999
+        });
+
+        // Continuous rhythmic fireworks bursts from both edges
+        fireworksInterval = setInterval(function() {
+          const timeLeft = animationEnd - Date.now();
+          if (timeLeft <= 0) {
+            return clearInterval(fireworksInterval);
+          }
+
+          const particleCount = 45 * (timeLeft / duration);
+
+          // Left Cannon: firing up and into center
+          confetti({
+            particleCount: Math.floor(particleCount),
+            angle: 60 + (Math.random() * 20 - 10),
+            spread: 75,
+            startVelocity: 65 + Math.random() * 15,
+            origin: { x: 0, y: 0.85 },
+            colors: ['#38bdf8', '#34d399', '#facc15', '#a855f7', '#f43f5e', '#ffffff', '#67e8f9'],
+            shapes: ['circle', 'square', 'star'],
+            ticks: 200,
+            gravity: 1.1,
+            scalar: 1.25,
+            zIndex: 999999
+          });
+
+          // Right Cannon: firing up and into center
+          confetti({
+            particleCount: Math.floor(particleCount),
+            angle: 120 + (Math.random() * 20 - 10),
+            spread: 75,
+            startVelocity: 65 + Math.random() * 15,
+            origin: { x: 1, y: 0.85 },
+            colors: ['#38bdf8', '#34d399', '#facc15', '#a855f7', '#f43f5e', '#ffffff', '#67e8f9'],
+            shapes: ['circle', 'square', 'star'],
+            ticks: 200,
+            gravity: 1.1,
+            scalar: 1.25,
+            zIndex: 999999
+          });
+
+          // Occasional center sky sparkling burst
+          if (Math.random() < 0.35) {
+            confetti({
+              particleCount: 25,
+              spread: 120,
+              startVelocity: 35,
+              origin: { x: 0.3 + Math.random() * 0.4, y: 0.25 + Math.random() * 0.25 },
+              colors: ['#facc15', '#ffffff', '#38bdf8', '#34d399'],
+              shapes: ['star'],
+              scalar: 1.4,
+              zIndex: 999999
+            });
+          }
+        }, 250);
+      } else {
+        // Native Canvas Fallback (100% Offline Compatible)
+        runNativeCanvasFireworks(duration);
+      }
+    }
+
+    function runNativeCanvasFireworks(duration) {
+      let canvas = document.getElementById('native-fireworks-canvas');
+      if (!canvas) {
+        canvas = document.createElement('canvas');
+        canvas.id = 'native-fireworks-canvas';
+        canvas.style.position = 'fixed';
+        canvas.style.inset = '0';
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
+        canvas.style.pointerEvents = 'none';
+        canvas.style.zIndex = '999999';
+        document.body.appendChild(canvas);
+      }
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+      const colors = ['#38bdf8', '#34d399', '#facc15', '#a855f7', '#f43f5e', '#ffffff', '#67e8f9'];
+      const endTime = Date.now() + duration;
+
+      function spawn(side) {
+        const x = side === 'left' ? 20 : canvas.width - 20;
+        const angle = side === 'left' ? (Math.PI / 3) + (Math.random() * 0.3 - 0.15) : (2 * Math.PI / 3) + (Math.random() * 0.3 - 0.15);
+        const speed = 22 + Math.random() * 10;
+        for (let i = 0; i < 40; i++) {
+          particles.push({
+            x: x,
+            y: canvas.height * 0.85,
+            vx: Math.cos(angle) * speed + (Math.random() - 0.5) * 8,
+            vy: -Math.sin(angle) * speed + (Math.random() - 0.5) * 8,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            size: Math.random() * 4 + 2,
+            alpha: 1,
+            gravity: 0.38,
+            decay: 0.007 + Math.random() * 0.007
+          });
+        }
+      }
+
+      let spawnTimer = setInterval(() => {
+        if (Date.now() > endTime) {
+          clearInterval(spawnTimer);
+          return;
+        }
+        spawn('left');
+        spawn('right');
+      }, 250);
+
+      function loop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += p.gravity;
+          p.vx *= 0.98;
+          p.alpha -= p.decay;
+          if (p.alpha <= 0) {
+            particles.splice(i, 1);
+            continue;
+          }
+          ctx.save();
+          ctx.globalAlpha = p.alpha;
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+        if (particles.length > 0 || Date.now() < endTime) {
+          requestAnimationFrame(loop);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+      requestAnimationFrame(loop);
+    }
+
+    function unlockBgmBadge() {
+      if (!questState.badges.music) {
+        triggerUnlockBadge('music', 'badge-music', 'Cosmic Resonance');
+      }
+    }
+
+    // --- Quick Decrypt All / Seal All (Recruiter Ease) ---
+    function toggleDecryptAll() {
+      questState.isAllDecrypted = !questState.isAllDecrypted;
+      const btnText = document.getElementById('hud-decrypt-btn-text');
+
+      const wrappers = document.querySelectorAll('.flip-card-wrapper');
+      wrappers.forEach(wrapper => {
+        const inner = wrapper.querySelector('.flip-card-inner');
+        if (!inner) return;
+
+        if (questState.isAllDecrypted) {
+          inner.classList.add('is-flipped');
+          unlockCard(wrapper);
+        } else {
+          inner.classList.remove('is-flipped');
+        }
+      });
+
+      if (questState.isAllDecrypted) {
+        if (btnText) btnText.innerText = '↺ Seal All';
+        if (questState.sfxEnabled) playLevelUpSfx();
+        showToast('⚡ All 20 Classified Archives Decrypted!');
+      } else {
+        if (btnText) btnText.innerText = '⚡ Decrypt All';
+        showToast('🔒 Archives Sealed');
+      }
+    }
+
+    // --- Achievements Modal Controllers ---
+    function openAchievementsModal() {
+      const modal = document.getElementById('achievements-modal');
+      if (modal) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100', 'pointer-events-auto');
+        if (questState.sfxEnabled) playTone(659.25, 0.12, 'sine', 0.12, 0);
+      }
+    }
+
+    function closeAchievementsModal() {
+      const modal = document.getElementById('achievements-modal');
+      if (modal) {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100', 'pointer-events-auto');
+      }
+    }
+
+    const modalBackdrop = document.getElementById('achievements-modal');
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) {
+          closeAchievementsModal();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeAchievementsModal();
+      }
+    });
+
+    // ==================== INTERACTIVE CARD FLIP & QUEST EVENT BINDINGS ====================
+    document.querySelectorAll('.flip-card-wrapper').forEach(wrapper => {
+      // Hover unlocks card
+      wrapper.addEventListener('mouseenter', () => {
+        unlockCard(wrapper);
+      });
+
+      // Click or tap toggles card flip and unlocks card
+      wrapper.addEventListener('click', (e) => {
+        // If clicking inside interactive links/buttons, do not toggle flip
+        if (e.target.closest('a, button, input, [role="button"]')) {
+          return;
+        }
+        const inner = wrapper.querySelector('.flip-card-inner');
+        if (inner) {
+          inner.classList.toggle('is-flipped');
+          unlockCard(wrapper);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
